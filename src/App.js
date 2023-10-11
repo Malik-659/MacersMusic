@@ -2,6 +2,7 @@ import "./App.css";
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
 import SideBar from "./components/SideBar/SideBar";
+import Login from "./components/account/Login";
 import MusicCreate from "./components/musics/MusicCreate";
 import MainRoutes from "./routing/MainRoutes";
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <>
       <SideBar />
       <MainRoutes />
-      <MusicPlayer/>
+      <MusicPlayer />
     </>
   );
 }
