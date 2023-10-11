@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const addLocalStorage = (user) => {
-  localStorage.setItem("name", JSON.stringify(user.name));
+export const addToLocalStorage = (name) => {
+  localStorage.setItem("name", JSON.stringify(name));
 };
 
 export const logout = () => {
