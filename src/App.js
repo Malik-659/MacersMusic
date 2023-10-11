@@ -1,4 +1,5 @@
 import "./App.css";
+import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
 import SideBar from "./components/SideBar/SideBar";
 import Login from "./components/account/Login";
@@ -9,6 +10,7 @@ function App() {
     <>
       <SideBar />
       <MainRoutes />
+      <MusicPlayer />
     </>
   );
 }
