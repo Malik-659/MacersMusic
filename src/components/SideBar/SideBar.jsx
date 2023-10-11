@@ -1,56 +1,38 @@
 import React from "react";
 import logo from "../../images/logo.svg";
-import Home from "../../images/Home.svg";
-import Playlist from "../../images/playlist.svg";
-import Radio from "../../images/radio.svg";
-import Video from "../../images/videos.svg";
-import searchlogo from "../../images/search.svg";
-import Profile from "../../images/profile.svg";
-import Logout from "../../images/Logout.svg";
+import {GoHomeFill } from "react-icons/go";
+import {BiSolidPlaylist,BiSearch} from 'react-icons/bi'
+import {FaRadio} from 'react-icons/fa6'
+import {IoMdAddCircle} from 'react-icons/io'
 import { useNavigate } from "react-router-dom";
+import {IoLogOut} from 'react-icons/io5'
+import {BsPersonFill} from 'react-icons/bs'
+
 
 const SideBar = () => {
   const navigate = useNavigate();
   return (
     <>
       <div className="pl-3 pt-8 pb-8 flex items-center bg-[#1D2123]">
-        <img src={logo} alt="" className="pl-8 "/>
-        <img src={searchlogo} alt="navlogo" className="pl-20" />
+        <img src={logo} alt="" className="pl-8 " />
+        <BiSearch className="w-7 h-7 ml-12 fill-[#bababa]" />
         <input
           type="text"
-          placeholder="   Search"
-          className="bg-inherit w-3/4 ml-8 white-[#FFFFFF40] opacity-75 h-8 "
+          placeholder="Search"
+          className="bg-inherit w-1/2 ml-3 text-white opacity-75 h-8 "
         />
       </div>
       <div className="inline-block bg-[#1D2123] h-screen">
         <div className="bg-[#1D2123] pl-8 pr-8">
           <div className="w-14 h-56 bg-[#1A1E1F] mt-10 mb-5 flex flex-col justify-around items-center rounded-3xl p-3 ">
-            <img
-              src={Home}
-              alt=""
-              width="32"
-              height="32"
-              onClick={() => navigate("/")}
-            />
-            <img
-              src={Playlist}
-              alt=""
-              width="32"
-              height="32"
-              onClick={() => navigate("/playlist")}
-            />
-            <img
-              src={Radio}
-              alt=""
-              width="32"
-              height="32"
-              onClick={() => navigate("/radio")}
-            />
-            <img src={Video} alt="" width="32" height="32" />
+            <GoHomeFill className="w-7 h-7 fill-[#bababa]" onClick={() => navigate("/")} />
+            <BiSolidPlaylist className="w-7 h-7 fill-[#bababa]"  onClick={() => navigate("/playlist")}/>
+            <FaRadio className="w-7 h-7 fill-[#bababa]" onClick={() => navigate("/radio")} />
+            <IoMdAddCircle className="w-7 h-7 fill-[#bababa]" onClick={() => navigate("/radio")} />
           </div>
           <div className="w-14 h-32 bg-[#1A1E1F] flex flex-col justify-around p-2 items-center rounded-3xl">
-            <img src={Profile} alt="" width="32" height="32" />
-            <img src={Logout} alt="" width="32" height="32" />
+            <BsPersonFill className="w-7 h-7 fill-[#bababa]" onClick={() => navigate("/")} />
+            <IoLogOut className="w-7 h-7 fill-[#bababa]" onClick={() => navigate("/")} />
           </div>
         </div>
       </div>
