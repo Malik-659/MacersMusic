@@ -1,6 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { deleteMusic, editMusic } from "../../store/music/musicAction";
 
 const MusicItem = ({ music }) => {
+  const dispatch = useDispatch();
   return (
     <div className="ml-32 mt-20">
       <ul>
@@ -15,6 +18,10 @@ const MusicItem = ({ music }) => {
         </li>
         <li>{music.date}</li>
       </ul>
+      <button>Edit</button>
+      <button onClick={() => dispatch(deleteMusic({ id: music.id }))}>
+        Delete
+      </button>
     </div>
   );
 };

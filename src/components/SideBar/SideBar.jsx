@@ -5,12 +5,16 @@ import {BiSolidPlaylist,BiSearch} from 'react-icons/bi'
 import {FaRadio} from 'react-icons/fa6'
 import {IoMdAddCircle} from 'react-icons/io'
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { loginAccount } from "../../store/account/accountAction";
 import {IoLogOut} from 'react-icons/io5'
 import {BsPersonFill} from 'react-icons/bs'
 
 
 const SideBar = () => {
+  // const { modalReg, modalLog } = useSelector((state) => state.account);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <>
       <div className="pl-3 pt-8 pb-8 flex items-center w-full bg-[#1D2123] fixed z-20">
