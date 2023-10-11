@@ -2,7 +2,7 @@ import React from "react";
 
 const MusicItem = ({ music }) => {
   return (
-    <div>
+    <div className="ml-32 mt-20">
       <ul>
         <li>{music.name}</li>
         <li>{music.author}</li>
