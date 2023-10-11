@@ -23,8 +23,8 @@ const SideBar = () => {
         />
       </div>
       <div className="inline-block bg-[#1D2123] h-screen">
-        <div className="bg-[#1D2123] pl-8 pr-8">
-          <div className="w-14 h-56 bg-[#1A1E1F] mt-10 mb-5 flex flex-col justify-around items-center rounded-3xl p-3 ">
+        <div className="bg-[#1D2123] pl-8 pr-8 pt-24">
+          <div className="w-14 h-56 bg-[#1A1E1F] mb-5 flex flex-col justify-around items-center rounded-3xl p-3 ">
             <img
               src={Home}
               alt=""
