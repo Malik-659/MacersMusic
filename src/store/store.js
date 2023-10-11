@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import accountReducer from "./account/accountSlice";
 import musicReducer from "./music/musicSlice";
 
 export default configureStore({
@@ -7,6 +8,7 @@ export default configureStore({
   //       serializableCheck: false,
   //     }),
   reducer: {
+    account: accountReducer,
     musics: musicReducer,
   },
 });

@@ -9,7 +9,9 @@ const MusicItem = ({ music }) => {
       <ul>
         <li>{music.name}</li>
         <li>{music.author}</li>
-        <li>{music.image}</li>
+        <li>
+          <img src={music.image} alt={music.name} width="100" height="100" />
+        </li>
         <li>
           <audio
             controls
