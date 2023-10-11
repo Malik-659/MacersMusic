@@ -20,11 +20,11 @@ const SideBar = () => {
     <>
       <div className="pl-3 pt-8 pb-8 flex items-center w-full bg-[#1D2123] fixed z-20">
         <img src={logo} alt="" className="pl-8 " />
-        <BiSearch className="w-7 h-7 ml-12 fill-[#bababa]" />
+        <BiSearch className="w-7 h-7 ml-20 fill-[#bababa]" />
         <input
           type="text"
           placeholder="Search"
-          className="bg-inherit w-1/2 ml-3 text-white opacity-75 h-8 "
+          className="bg-inherit w-3/4 ml-8 text-white opacity-75 h-8 "
         />
       </div>
       <div className="inline-block bg-[#1D2123] h-screen fixed top-24 z-20">
