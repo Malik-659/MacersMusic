@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { loginAccount } from "../../store/account/accountAction";
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -11,7 +12,7 @@ const Login = () => {
       if (!user[key].trim()) return alert("empty");
     }
 
-    dispatch(registerAccount(user));
+    dispatch(loginAccount(user));
   }
 
   return (

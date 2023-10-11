@@ -20,7 +20,7 @@ const MusicCreate = () => {
       if (!addMusic[key].trim()) return alert("empty");
     }
 
-    dispatch(setMusic(addMusic));
+    dispatch(setMusic({ addMusic }));
   }
 
   return (
