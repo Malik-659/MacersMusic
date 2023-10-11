@@ -44,7 +44,7 @@ const SideBar = () => {
             />
             <IoMdAddCircle
               className="w-7 h-7 fill-[#bababa]"
-              onClick={() => navigate("/radio")}
+              onClick={() => navigate("/add-music")}
             />
           </div>
           <div className="w-14 h-32 bg-[#1A1E1F] flex flex-col justify-around p-2 items-center rounded-3xl">
