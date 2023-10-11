@@ -1,16 +1,12 @@
 import "./App.css";
-import SideBar from "./components/SideBar/SideBar";
-import Register from "./components/account/Register";
-import MusicCreate from "./components/musics/MusicCreate";
-import MusicList from "./components/musics/MusicList";
 
+import SideBar from "./components/SideBar/SideBar";
+import MainRoutes from "./routing/MainRoutes";
 function App() {
   return (
     <>
-      <SideBar />
-      <MusicCreate />
-      <MusicList />
-      <Register />
+      <SideBar/>
+      <MainRoutes />
     </>
   );
 }
