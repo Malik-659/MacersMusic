@@ -8,13 +8,17 @@ import searchlogo from "../../images/search.svg";
 import Profile from "../../images/profile.svg";
 import Logout from "../../images/Logout.svg";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { loginAccount } from "../../store/account/accountAction";
 
 const SideBar = () => {
+  // const { modalReg, modalLog } = useSelector((state) => state.account);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <>
       <div className="pl-3 pt-8 pb-8 flex items-center bg-[#1D2123]">
-        <img src={logo} alt="" className="pl-8 "/>
+        <img src={logo} alt="" className="pl-8 " />
         <img src={searchlogo} alt="navlogo" className="pl-20" />
         <input
           type="text"
