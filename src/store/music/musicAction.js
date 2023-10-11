@@ -3,6 +3,7 @@ import axios from "axios";
 import { MUSIC_API } from "../../helpers/const";
 import { getAuthUser, getTotalPages } from "../../helpers/function";
 
+//!
 export const setMusic = createAsyncThunk(
   "musics/setMusic",
   async ({ addMusic }, { dispatch }) => {
@@ -35,6 +36,7 @@ export const getMusic = createAsyncThunk(
   }
 );
 
+//!
 export const getOneMusic = createAsyncThunk(
   "musics/getOneMusic",
   async ({ id }) => {
@@ -43,6 +45,7 @@ export const getOneMusic = createAsyncThunk(
   }
 );
 
+//!
 export const deleteMusic = createAsyncThunk(
   "musics/deleteMusic",
   async ({ id }, { dispatch }) => {
