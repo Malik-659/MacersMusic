@@ -26,7 +26,7 @@ const SideBar = () => {
           className="bg-inherit w-3/4 ml-8 text-white opacity-75 h-8 "
         />
       </div>
-      <div className="fixed top-24 inline-block bg-[#1D2123] h-screen">
+      <div className="fixed top-24 inline-block bg-[#1D2123] h-screen z-10">
 
         <div className="bg-[#1D2123] pl-8 pr-8">
           <div className="w-14 h-56 bg-[#1A1E1F] mt-10 mb-5 flex flex-col justify-around items-center rounded-3xl p-3 ">

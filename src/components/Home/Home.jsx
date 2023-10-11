@@ -6,9 +6,9 @@ import frame from '../../images/Frame 1.svg'
 
 const Home = () => {
   return (
-    <div className="top-[98px] left-[120px] w-full h-full bg-[#1D2123] relative">
-      <div className="flex ">
-        <div className="ml-8 mt-10 rounded-[40px] w-[680px] h-[370px]  w-3/6 bg-sky-600">
+    <div className="pl-[120px] pt-[90px] w-[100%] h-full bg-[#1D2123] relative z-0">
+      <div className="flex">
+        <div className="ml-8 mt-10 rounded-[40px] w-[680px] w-3/6 bg-sky-600">
           <img src={frame} alt="" className="" />
         </div>
         <div className="">
