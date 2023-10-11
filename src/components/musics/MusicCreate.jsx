@@ -10,36 +10,62 @@ const MusicCreate = () => {
     music: "",
     author: "",
     date: "",
+    category: "",
+    genre: "",
+    album: "",
   });
-  console.log(addMusic);
+
+  function createMusic() {
+    for (let key in addMusic) {
+      if (!addMusic[key].trim()) return alert("empty");
+    }
+
+    dispatch(setMusic(addMusic));
+  }
+
   return (
     <div>
       <input
         type="text"
-        placeholder="Name"
+        placeholder="Название песни"
         onChange={(e) => setAddMusic({ ...addMusic, name: e.target.value })}
       />
       <input
         type="text"
-        placeholder="Image"
+        placeholder="Фото"
         onChange={(e) => setAddMusic({ ...addMusic, image: e.target.value })}
       />
       <input
         type="text"
-        placeholder="Href"
+        placeholder="Ссылка на песню"
         onChange={(e) => setAddMusic({ ...addMusic, music: e.target.value })}
       />
       <input
         type="text"
-        placeholder="Author"
+        placeholder="Автор"
         onChange={(e) => setAddMusic({ ...addMusic, author: e.target.value })}
       />
       <input
-        type="text"
-        placeholder="Date"
+        type="date"
+        placeholder="Дата выхода"
         onChange={(e) => setAddMusic({ ...addMusic, date: e.target.value })}
       />
-      <button onClick={() => dispatch(setMusic(addMusic))}>Add Music</button>
+      <input
+        type="text"
+        placeholder="Категория"
+        onChange={(e) => setAddMusic({ ...addMusic, category: e.target.value })}
+      />
+      <input
+        type="text"
+        placeholder="Жанр"
+        onChange={(e) => setAddMusic({ ...addMusic, genre: e.target.value })}
+      />
+      <input
+        type="text"
+        placeholder="Альбом"
+        onChange={(e) => setAddMusic({ ...addMusic, album: e.target.value })}
+      />
+      <button onClick={createMusic}>Add Music</button>
     </div>
   );
 };

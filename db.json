@@ -1,4 +1,13 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "mail": "@mail",
+      "password": "admin",
+      "admin": true
+    }
+  ],
   "musics": [
     {
       "name": "Миллионы Алых Роз",
