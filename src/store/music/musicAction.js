@@ -35,14 +35,13 @@ export const getMusic = createAsyncThunk(
   }
 );
 
-//details
-// export const getOneMusic = createAsyncThunk(
-//   "musics/getOneMusic",
-//   async ({ id }) => {
-//     const { data } = await axios.get(`${MUSIC_API}/${id}`);
-//     return data;
-//   }
-// );
+export const getOneMusic = createAsyncThunk(
+  "musics/getOneMusic",
+  async ({ id }) => {
+    const { data } = await axios.get(`${MUSIC_API}/${id}`);
+    return data;
+  }
+);
 
 export const deleteMusic = createAsyncThunk(
   "musics/deleteMusic",

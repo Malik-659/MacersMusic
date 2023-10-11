@@ -3,16 +3,20 @@ import { PiShuffleAngularBold } from "react-icons/pi";
 import { BiSkipPrevious, BiSkipNext } from "react-icons/bi";
 import { BsFillPlayCircleFill, BsRepeat1 } from "react-icons/bs";
 import { ImVolumeMedium } from "react-icons/im";
+import { useSelector } from "react-redux";
 
 const MusicPlayer = () => {
+  const { oneMusic } = useSelector((state) => state.musics);
+
+  console.log(oneMusic);
   return (
     <div className="z-30 fixed bottom-0 bg-[]">
       <div className=" flex flex-row justify-around  items-center w-screen bg-gray-800 h-32">
         <div className="flex items-center">
           <img
             className="h-14 w-14 rounded-2xl"
-            alt="hero_music"
-            src="https://sun3-12.userapi.com/impg/AuZ4V3Yto0cETcQY6B75nCjWctRCzGS7oYUWyg/mvR3_pp6b8Q.jpg?size=651x807&quality=95&sign=4d2debaf84f8ef9883759d558565ca95&c_uniq_tag=XYe49_5jqkTpb3X8VqG0jwhkRls6SQyakR3pPEjmxvs&type=album"
+            alt={oneMusic.name}
+            src={oneMusic.music}
           />
           <div className="ml-4">
             <h3 className=" text-sm text-white">Seasons in</h3>

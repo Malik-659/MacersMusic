@@ -1,11 +1,18 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { deleteMusic, editMusic } from "../../store/music/musicAction";
+import {
+  deleteMusic,
+  editMusic,
+  getOneMusic,
+} from "../../store/music/musicAction";
 
 const MusicItem = ({ music }) => {
   const dispatch = useDispatch();
   return (
-    <div className="ml-32 mt-20">
+    <div
+      className="ml-32 mt-20"
+      onClick={() => dispatch(getOneMusic({ id: music.id }))}
+    >
       <ul>
         <li>{music.name}</li>
         <li>{music.author}</li>
@@ -15,7 +22,7 @@ const MusicItem = ({ music }) => {
         <li>
           <audio
             controls
-            src="https://cdn7.sefon.pro/prev/7QJOfO7C8m05NHEPtgUcUQ/1697039772/506/Bakhtin%20-%20%D0%A6%D0%B5%D0%BB%D0%BE%D0%B2%D0%B0%D0%BB%D0%B0%20%28192kbps%29.mp3 "
+            src="https://cdn7.sefon.pro/prev/tBnqyhWK8--beLfvAAo6vA/1697073405/2/T-Fest%20%26%20%D0%A1%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%BD%D0%B8%D1%82%20-%20%D0%9B%D0%B0%D0%BC%D0%B1%D0%B0%D0%B4%D0%B0%20%28192kbps%29.mp3"
           ></audio>
         </li>
         <li>{music.date}</li>

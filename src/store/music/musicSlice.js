@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getMusic, setMusic } from "./musicAction";
+import { getMusic, getOneMusic, setMusic } from "./musicAction";
 
 const musicSlice = createSlice({
   name: "musics",
   initialState: {
     musics: [], //
-    oneMusic: null,
+    oneMusic: "",
     loading: false, //
     status: "",
     currentPage: 1,
@@ -44,7 +44,10 @@ const musicSlice = createSlice({
       .addCase(getMusic.fulfilled, (state, action) => {
         state.loading = false;
         state.musics = action.payload.data;
-        console.log(state.musics);
+      })
+      .addCase(getOneMusic.fulfilled, (state, action) => {
+        state.loading = false;
+        state.oneMusic = action.payload;
       });
   },
 });

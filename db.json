@@ -10,20 +10,8 @@
   ],
   "musics": [
     {
-      "name": "Миллионы Алых Роз",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Yegor_Creed_%28cropped%29.jpg",
-      "music": "https://cdn3.sefon.pro/prev/eYDtZ480Q3KydETDw3OAiw/1696986653/72/%D0%95%D0%B3%D0%BE%D1%80%20%D0%9A%D1%80%D0%B8%D0%B4%20-%20%D0%9C%D0%B8%D0%BB%D0%BB%D0%B8%D0%BE%D0%BD%20%D0%90%D0%BB%D1%8B%D1%85%20%D0%A0%D0%BE%D0%B7%20%28192kbps%29.mp3",
-      "author": "Егор Крид",
-      "date": "1 Января 2017",
-      "id": 1
-    },
-    {
-      "name": "Не смогу забыть",
-      "image": "https://i.scdn.co/image/ab6761610000e5ebfaca175ff553179f6b3bed6a",
-      "music": "https://cdn3.sefon.pro/prev/uza39K5bBEfxWI6iOZx1-A/1696986155/506/JONY%20-%20%D0%9D%D0%B5%20%D0%A1%D0%BC%D0%BE%D0%B3%D1%83%20%D0%97%D0%B0%D0%B1%D1%8B%D1%82%D1%8C%20%28192kbps%29.mp3",
-      "author": "JONY",
-      "date": "25 Августа 2023",
-      "id": 2
+      "id": 1,
+      "name": "a,ijsk"
     }
   ]
 }

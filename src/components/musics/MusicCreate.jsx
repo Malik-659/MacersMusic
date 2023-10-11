@@ -24,7 +24,7 @@ const MusicCreate = () => {
   }
 
   return (
-    <div>
+    <div className="">
       <input
         type="text"
         placeholder="Название песни"
