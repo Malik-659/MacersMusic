@@ -10,7 +10,7 @@ export const logout = () => {
 };
 
 export const checkUserLogin = () => {
-  const user = localStorage.getItem("user");
+  const user = localStorage.getItem("name");
   if (!user) return false;
   return true;
 };
