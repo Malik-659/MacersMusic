@@ -94,7 +94,7 @@ const MusicPlayer = () => {
               onChange={onSeek}
               className="w-[46.813rem] bg-[#FACD66]"
             />
-            <h3>{`${currTime.min}:${currTime.sec}/${
+            <h3 className="text-white font-bold">{`${currTime.min}:${currTime.sec}/${
               formatTime(duration / 1000).min
             }:${formatTime(duration / 1000).sec}`}</h3>
           </div>
