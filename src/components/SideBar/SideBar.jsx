@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../images/logo.svg";
 import { GoHomeFill } from "react-icons/go";
 import { BiSolidPlaylist, BiSearch } from "react-icons/bi";
@@ -14,6 +14,15 @@ import Register from "../account/Register";
 
 const SideBar = () => {
   const { modalReg, modalLog } = useSelector((state) => state.account);
+
+  useEffect(() => {
+    if (modalLog || modalReg) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList = [];
+    }
+  }, [modalLog, modalReg]);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (
@@ -52,7 +61,7 @@ const SideBar = () => {
           <div className="w-14 h-32 bg-[#1A1E1F] flex flex-col justify-around p-2 items-center rounded-3xl">
             <BsPersonFill
               className="w-7 h-7 fill-[#bababa]"
-              onClick={() => dispatch(toggleReg())}
+              onClick={() => dispatch(toggleLog())}
             />
             <IoLogOut
               className="w-7 h-7 fill-[#bababa]"

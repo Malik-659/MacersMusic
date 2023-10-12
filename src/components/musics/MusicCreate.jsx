@@ -9,9 +9,7 @@ const MusicCreate = () => {
     image: "",
     music: "",
     author: "",
-    date: "",
     category: "",
-    genre: "",
     album: "",
   });
 
@@ -59,24 +57,10 @@ const MusicCreate = () => {
             className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
           />
           <input
-            type="date"
-            placeholder="Дата выхода"
-            onChange={(e) => setAddMusic({ ...addMusic, date: e.target.value })}
-            className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
-          />
-          <input
             type="text"
             placeholder="Категория"
             onChange={(e) =>
               setAddMusic({ ...addMusic, category: e.target.value })
-            }
-            className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
-          />
-          <input
-            type="text"
-            placeholder="Жанр"
-            onChange={(e) =>
-              setAddMusic({ ...addMusic, genre: e.target.value })
             }
             className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
           />
