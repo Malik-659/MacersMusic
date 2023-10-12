@@ -11,8 +11,7 @@ function App() {
     <>
       <SideBar />
       <MainRoutes />
-      <MusicPlayer />
-      <MusicList />   
+      <MusicPlayer />  
     </>
   );
 }
