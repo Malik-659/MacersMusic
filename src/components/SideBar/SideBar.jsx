@@ -18,17 +18,19 @@ const SideBar = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="pl-3 pt-8 pb-8 flex items-center w-full bg-[#1D2123] fixed z-20">
+      <div className="pl-3 pt-8 pb-8 flex items-center w-full bg-[#00000000] fixed z-20 ">
         <img src={logo} alt="" className="pl-8 " />
-        <BiSearch className="w-7 h-7 ml-20 fill-[#bababa]" />
-        <input
-          type="text"
-          placeholder="Search"
-          className="bg-inherit w-3/4 ml-8 text-white opacity-75 h-8 "
-        />
+        <div className="flex w-1/3 h-12 bg-[#1A1E1F] relative rounded-3xl items-center ml-20 p-5">
+          <BiSearch className="w-7 h-7 fill-[#bababa]" />
+          <input
+            type="text"
+            placeholder="Search"
+            className="bg-inherit w-full ml-8 text-white opacity-75 h-8 outline-none "
+          />
+        </div>
       </div>
-      <div className="inline-block bg-[#1D2123] h-screen fixed top-24 z-20">
-        <div className="bg-[#1D2123] pl-8 pr-8">
+      <div className="inline-block bg-[#00000000] h-screen fixed top-24 z-20">
+        <div className="bg-[#00000000] pl-8 pr-8">
           <div className="w-14 h-56 bg-[#1A1E1F] mt-10 mb-5 flex flex-col justify-around items-center rounded-3xl p-3 ">
             <GoHomeFill
               className="w-7 h-7 fill-[#bababa]"
@@ -44,7 +46,7 @@ const SideBar = () => {
             />
             <IoMdAddCircle
               className="w-7 h-7 fill-[#bababa]"
-              onClick={() => navigate("/radio")}
+              onClick={() => navigate("/add-music")}
             />
           </div>
           <div className="w-14 h-32 bg-[#1A1E1F] flex flex-col justify-around p-2 items-center rounded-3xl">

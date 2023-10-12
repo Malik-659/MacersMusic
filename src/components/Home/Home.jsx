@@ -2,14 +2,14 @@ import React from "react";
 import heart from "../../images/Heart.svg";
 import Rect from "../../images/Rectangle.svg";
 import Rectangle from "../../images/Rectangle 14.svg";
-import frame from '../../images/Frame 1.svg'
+import frame from "../../images/Frame 1.svg";
 
 const Home = () => {
   return (
     <div className="pl-[110px] pt-[90px] w-[100%] h-full bg-[#1D2123] relative z-0">
       <div className="flex">
-        <div className="ml-8 mt-10 rounded-[40px] w-[680px] w-3/6 bg-sky-600">
-          <img src={frame} alt="" className="" />
+        <div className="ml-8 mt-10 rounded-[54px]  w-3/6">
+          <img src={frame} alt="" className="w-full" />
         </div>
         <div className="">
           <p className="mt-10 ml-8 text-white text-[24px] font-bold">
