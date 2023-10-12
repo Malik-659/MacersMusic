@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerAccount } from "../../store/account/accountAction";
+import { MdCancel } from "react-icons/md";
+import { FcGoogle } from "react-icons/fc";
+import { AiFillGithub, AiFillFacebook } from "react-icons/ai";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -19,24 +22,46 @@ const Register = () => {
   }
 
   return (
-    <div className="">
-      <input
-        type="text"
-        placeholder="Name"
-        onChange={(e) => setUser({ ...user, name: e.target.value })}
-      />
-      <input
-        type="text"
-        placeholder="Mail"
-        onChange={(e) => setUser({ ...user, mail: e.target.value })}
-      />
-      <input
-        type="text"
-        placeholder="Password"
-        onChange={(e) => setUser({ ...user, password: e.target.value })}
-      />
-      <button onClick={addUser}>Registration</button>
-    </div>
+    <>
+      <div className="fixed top-0 left-0 bottom-0 right-0 z-10 bg-[#00000086] flex items-center justify-center">
+        <div className="w-1/4 h-1/2 flex flex-col items-center pt-10 bg-[#525252bc] relative rounded-2xl">
+          <MdCancel className=" absolute top-4 right-4 fill-white z-10 w-7 h-7" />
+          <h2 className=" font-bold text-3xl">Регистрация</h2>
+          <div className="pt-5  flex flex-col items-center justify-center">
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-25 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
+              onChange={(e) => setUser({ ...user, name: e.target.value })}
+            />
+            <input
+              type="text"
+              placeholder="Mail"
+              className="w-25 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
+              onChange={(e) => setUser({ ...user, mail: e.target.value })}
+            />
+            <input
+              type="text"
+              placeholder="Password"
+              className="w-25 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
+              onChange={(e) => setUser({ ...user, password: e.target.value })}
+            />
+          </div>
+          <button
+            className="w-1/4 h-12 rounded-2xl bg-[#242424f0] text-white"
+            onClick={addUser}
+          >
+            Registration
+          </button>
+          <p className="mt-3">Нет акк ? Регистрация</p>
+          <div className="flex mt-6">
+          <FcGoogle className="w-10 h-10"/>
+          <AiFillFacebook className="w-10 h-10 mx-4"/>
+          <AiFillGithub className="w-10 h-10"/>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

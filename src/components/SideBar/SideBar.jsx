@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { IoLogOut } from "react-icons/io5";
 import { BsPersonFill } from "react-icons/bs";
-import { toggleLog } from "../../store/account/accountSlice";
+import { toggleLog, toggleReg } from "../../store/account/accountSlice";
 import Login from "../account/Login";
 import Register from "../account/Register";
 
@@ -52,7 +52,7 @@ const SideBar = () => {
           <div className="w-14 h-32 bg-[#1A1E1F] flex flex-col justify-around p-2 items-center rounded-3xl">
             <BsPersonFill
               className="w-7 h-7 fill-[#bababa]"
-              onClick={() => dispatch(toggleLog())}
+              onClick={() => dispatch(toggleReg())}
             />
             <IoLogOut
               className="w-7 h-7 fill-[#bababa]"

@@ -58,8 +58,8 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="z-30 fixed bottom-0 bg-[]">
-      <div className="flex flex-row justify-around items-center w-screen bg-gray-800 h-32">
+    <div className="z-30 fixed bottom-0 ">
+      <div className="flex flex-row justify-around items-center w-screen bg-[#00000085] h-32">
         <div className="flex items-center">
           <div className="w-14 h-14 overflow-hidden">
             <img
@@ -80,7 +80,7 @@ const MusicPlayer = () => {
             <BsFillPlayCircleFill
               onClick={playingButton}
               className="fill-white h-7 w-7 cursor-pointer"
-            />
+            ></BsFillPlayCircleFill>
             <BiSkipNext className="fill-white h-7 w-7" />
             <BsRepeat1 className="fill-white h-6 w-6" />
           </div>
@@ -94,7 +94,7 @@ const MusicPlayer = () => {
               onChange={onSeek}
               className="w-[46.813rem] bg-[#FACD66]"
             />
-            <h3>{`${currTime.min}:${currTime.sec}/${
+            <h3 className="text-white font-bold">{`${currTime.min}:${currTime.sec}/${
               formatTime(duration / 1000).min
             }:${formatTime(duration / 1000).sec}`}</h3>
           </div>
