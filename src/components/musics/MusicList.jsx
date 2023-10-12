@@ -10,7 +10,7 @@ const MusicList = () => {
     dispatch(getMusic());
   }, []);
   return (
-    <div className="pl-[120px] pt-[90px] w-[100%] h-full bg-[#1D2123] relative z-0">
+    <div className="pl-[120px] pt-[90px] w-[100%] h-screen bg-[#1D2123] relative ">
       {musics.map((music) => (
         <MusicItem key={music.id} music={music} />
       ))}

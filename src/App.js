@@ -11,10 +11,8 @@ function App() {
   return (
     <>
       <SideBar />
-      <Footer />
       <MainRoutes />
-      <MusicPlayer />
-      <MusicList />
+      <MusicPlayer />  
     </>
   );
 }
