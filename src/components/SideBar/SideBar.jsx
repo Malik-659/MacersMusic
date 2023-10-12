@@ -18,7 +18,7 @@ const SideBar = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="pl-3 pt-8 pb-8 flex items-center w-full bg-[#1D2123] fixed z-20">
+      <div className="pl-3 pt-8 pb-8 flex items-center w-full bg-[#00000000] fixed z-20">
         <img src={logo} alt="" className="pl-8 " />
         <BiSearch className="w-7 h-7 ml-20 fill-[#bababa]" />
         <input
