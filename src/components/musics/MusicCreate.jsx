@@ -24,7 +24,7 @@ const MusicCreate = () => {
   }
 
   return (
-    <div className="pl-[120px] pt-[90px] w-[100%] h-screen bg-[#1D2123] relative z-0 flex justify-center">
+    <div className="pl-[120px] pt-[90px] w-[100%] h-full bg-[#1D2123] relative z-0 flex justify-center">
       <div className="border-[#626263] border-2 pl-[30px] pr-[30px] rounded-[30px] shadow-inner shadow-[]">
         <h1 className="text-center text-[24px] text-white mt-8">CreateMusic</h1>
         <div className="flex flex-col items-center bg-[]">

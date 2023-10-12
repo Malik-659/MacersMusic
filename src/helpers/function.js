@@ -1,5 +1,6 @@
 import axios from "axios";
 
+//!
 export const addToLocalStorage = (name) => {
   localStorage.setItem("name", JSON.stringify(name));
 };
