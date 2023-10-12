@@ -13,7 +13,7 @@ const MusicItem = ({ music }) => {
   const dispatch = useDispatch();
   return (
     <div
-      className="text-white w-[65rem] h-[60px] flex items-center m-8 bg-[#33373B5E] rounded-[15px] justify-between relative pl-4 pr-4" // Добавляем класс "relative"
+      className="text-white w-[65rem] h-[60px] flex items-center m-8 bg-[#33373B5E] rounded-[15px] justify-between relative pl-4 pr-4 hover:bg-[#2a1d31] " // Добавляем класс "relative"
       onClick={() => {
         dispatch(getOneMusic({ id: music.id }));
       }}
