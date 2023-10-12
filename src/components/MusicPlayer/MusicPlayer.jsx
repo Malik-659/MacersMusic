@@ -58,8 +58,8 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="z-30 fixed bottom-0 bg-[]">
-      <div className="flex flex-row justify-around items-center w-screen bg-gray-800 h-32">
+    <div className="z-30 fixed bottom-0 ">
+      <div className="flex flex-row justify-around items-center w-screen bg-[#00000085] h-32">
         <div className="flex items-center">
           <div className="w-14 h-14 overflow-hidden">
             <img

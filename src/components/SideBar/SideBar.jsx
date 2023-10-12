@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../images/logo.svg";
 import { GoHomeFill } from "react-icons/go";
 import { BiSolidPlaylist, BiSearch } from "react-icons/bi";
@@ -8,12 +8,21 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { IoLogOut } from "react-icons/io5";
 import { BsPersonFill } from "react-icons/bs";
-import { toggleLog } from "../../store/account/accountSlice";
+import { toggleLog, toggleReg } from "../../store/account/accountSlice";
 import Login from "../account/Login";
 import Register from "../account/Register";
 
 const SideBar = () => {
   const { modalReg, modalLog } = useSelector((state) => state.account);
+
+  useEffect(() => {
+    if (modalLog || modalReg) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList = [];
+    }
+  }, [modalLog, modalReg]);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (

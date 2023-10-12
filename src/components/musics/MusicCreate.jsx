@@ -9,9 +9,7 @@ const MusicCreate = () => {
     image: "",
     music: "",
     author: "",
-    date: "",
     category: "",
-    genre: "",
     album: "",
   });
 
@@ -24,7 +22,7 @@ const MusicCreate = () => {
   }
 
   return (
-    <div className="pl-[120px] pt-[90px] w-[100%] h-screen bg-[#1D2123] relative z-0 flex justify-center">
+    <div className="pl-[120px] pt-[90px] w-[100%] h-full bg-[#1D2123] relative z-0 flex justify-center">
       <div className="border-[#626263] border-2 pl-[30px] pr-[30px] rounded-[30px] shadow-inner shadow-[]">
         <h1 className="text-center text-[24px] text-white mt-8">CreateMusic</h1>
         <div className="flex flex-col items-center bg-[]">
@@ -59,24 +57,10 @@ const MusicCreate = () => {
             className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
           />
           <input
-            type="date"
-            placeholder="Дата выхода"
-            onChange={(e) => setAddMusic({ ...addMusic, date: e.target.value })}
-            className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
-          />
-          <input
             type="text"
             placeholder="Категория"
             onChange={(e) =>
               setAddMusic({ ...addMusic, category: e.target.value })
-            }
-            className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
-          />
-          <input
-            type="text"
-            placeholder="Жанр"
-            onChange={(e) =>
-              setAddMusic({ ...addMusic, genre: e.target.value })
             }
             className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
           />

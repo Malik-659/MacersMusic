@@ -1,5 +1,6 @@
 import axios from "axios";
 
+//!
 export const addToLocalStorage = (name) => {
   localStorage.setItem("name", JSON.stringify(name));
 };
@@ -9,7 +10,7 @@ export const logout = () => {
 };
 
 export const checkUserLogin = () => {
-  const user = localStorage.getItem("user");
+  const user = localStorage.getItem("name");
   if (!user) return false;
   return true;
 };
