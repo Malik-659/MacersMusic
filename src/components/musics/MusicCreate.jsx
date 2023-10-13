@@ -32,9 +32,18 @@ const MusicCreate = () => {
   }, []);
 
   return (
-    <div className="pl-[120px] pt-[90px] w-[100%] h-full bg-[#1D2123] relative z-0 flex justify-center">
-      <div className="border-[#626263] border-2 pl-[30px] pr-[30px] rounded-[30px] shadow-inner shadow-[]">
+    <div className="pl-[120px] pt-[90px] w-[100%] h-screen bg-[#1D2123] relative z-0 flex justify-center">
+      <div className="border-[#626263] border-2 pl-[30px] pr-[30px] w-9/12 h-[40.625rem] rounded-[30px] shadow-inner shadow-[]">
         <h1 className="text-center text-[24px] text-white mt-8">CreateMusic</h1>
+    
+                  <div className="flex justify-around  items-center">
+          <div>
+            <img
+              src="https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg"
+              alt=""
+              className=" rounded-3xl w-96 h-96"
+            />
+          </div>
         <div className="flex flex-col items-center bg-[]">
           <input
             type="text"
@@ -101,6 +110,8 @@ const MusicCreate = () => {
           >
             Add Music
           </button>
+</div>
+
         </div>
       </div>
     </div>

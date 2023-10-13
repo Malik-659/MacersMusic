@@ -27,8 +27,8 @@ const Register = () => {
 
   return (
     <>
-      <div className="fixed -top-52 left-0 bottom-0 right-0 z-10 bg-[#00000086] flex items-center justify-center text-white">
-        <div className="w-1/4  flex flex-col items-center py-4 bg-[#53/4 my-6252bc] relative rounded-2xl">
+      <div className="fixed -top-52 left-0 bottom-0 right-0 z-50 bg-[#00000086] flex items-center justify-center text-white">
+        <div className="w-1/4  flex flex-col items-center py-4 bg-[#525252bc] relative rounded-2xl">
           <MdCancel
             onClick={() => dispatch(toggleReg())}
             className=" absolute top-4 right-4 fill-white z-10 w-7 h-7"

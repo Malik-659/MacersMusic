@@ -24,7 +24,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="fixed -top-40 left-0 bottom-0 right-0 z-10 bg-[#00000086] flex items-center justify-center text-white">
+      <div className="fixed -top-40 left-0 bottom-0 right-0 bg-[#00000086] flex items-center justify-center text-white z-50">
         <div className="w-1/4 py-4 flex flex-col items-center bg-[#525252bc] relative rounded-2xl">
           <MdCancel
             onClick={() => dispatch(toggleLog())}
