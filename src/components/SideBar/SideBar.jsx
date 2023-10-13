@@ -27,7 +27,7 @@ const SideBar = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <div className="pl-3 pt-8 pb-8 flex items-center w-full bg-[#00000000] fixed z-20 ">
+      <div className="pl-3 pt-8 flex items-center w-full bg-[#00000000] fixed z-20 ">
         <img src={logo} alt="" className="pl-8 " />
         <div className="flex w-1/3 h-12 bg-[#1A1E1F] relative rounded-3xl items-center ml-20 p-5">
           <BiSearch className="w-7 h-7 fill-[#bababa]" />
@@ -42,29 +42,29 @@ const SideBar = () => {
         <div className="bg-[#00000000] pl-8 pr-8">
           <div className="w-14 h-56 bg-[#1A1E1F] mt-10 mb-5 flex flex-col justify-around items-center rounded-3xl p-3 ">
             <GoHomeFill
-              className="w-7 h-7 fill-[#bababa]"
+              className="w-7 h-7 fill-[#bababa]  hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => navigate("/")}
             />
             <BiSolidPlaylist
-              className="w-7 h-7 fill-[#bababa]"
+              className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => navigate("/playlist")}
             />
             <FaRadio
-              className="w-7 h-7 fill-[#bababa]"
+              className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => navigate("/radio")}
             />
             <IoMdAddCircle
-              className="w-7 h-7 fill-[#bababa]"
+              className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => navigate("/add-music")}
             />
           </div>
           <div className="w-14 h-32 bg-[#1A1E1F] flex flex-col justify-around p-2 items-center rounded-3xl">
             <BsPersonFill
-              className="w-7 h-7 fill-[#bababa]"
+              className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => dispatch(toggleLog())}
             />
             <IoLogOut
-              className="w-7 h-7 fill-[#bababa]"
+              className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-3xl shadow-yellow-500"
               onClick={() => navigate("/")}
             />
           </div>

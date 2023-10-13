@@ -8,11 +8,11 @@ const Home = () => {
   return (
     <div className="pl-[110px] pt-[90px] w-[100%] h-full bg-[#1D2123] relative z-0">
       <div className="flex">
-        <div className="ml-8 mt-10 rounded-[54px]  w-3/6">
+        <div className="ml-20 mt-10 rounded-[54px]  w-3/6">
           <img src={frame} alt="" className="w-full" />
         </div>
         <div className="">
-          <p className="mt-10 ml-8 text-white text-[24px] font-bold">
+          <p className="mt-10 ml-8   text-white text-[24px] font-bold">
             Top sharts
           </p>
           <div className=" flex items-center justify-between bg-[#1A1E1F] w-[400px] h-[96px] ml-8 mt-8 rounded-[20px]">

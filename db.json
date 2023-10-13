@@ -20,6 +20,30 @@
       "likes": [],
       "rating": [],
       "id": 1
+    },
+    {
+      "name": "3",
+      "image": "3",
+      "music": "https://cdn7.sefon.pro/prev/kn2mg3EmpKWt9q8G3Bd0jQ/1697208589/493/Adil%20-%20%D0%93%D0%BE%D1%81%D0%BF%D0%BE%D0%B6%D0%B0%20%28192kbps%29.mp3",
+      "author": "4",
+      "category": "5",
+      "album": "6",
+      "comments": [],
+      "likes": [],
+      "rating": [],
+      "id": 2
+    },
+    {
+      "name": "3",
+      "image": "3",
+      "music": "https://cdn7.sefon.pro/prev/kn2mg3EmpKWt9q8G3Bd0jQ/1697208589/493/Adil%20-%20%D0%93%D0%BE%D1%81%D0%BF%D0%BE%D0%B6%D0%B0%20%28192kbps%29.mp3",
+      "author": "4",
+      "category": "5",
+      "album": "6",
+      "comments": [],
+      "likes": [],
+      "rating": [],
+      "id": 3
     }
   ]
 }
