@@ -1,0 +1,27 @@
+.bgModal {
+  background: url("https://img.freepik.com/premium-photo/music-background-with-phone-and-with-music-icon-modern-technology-concept-listening-to-music_169016-14723.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.modalInp {
+  width: 80%;
+  height: 40px;
+  border-radius: 6px;
+  border: solid 1px lightgray;
+  margin: 20px;
+  padding: 5px;
+  background: whitesmoke;
+}
+
+.modalBtn {
+  width: 80%;
+  height: 40px;
+  border-radius: 6px;
+  border: solid 1px lightgray;
+  margin: 10px;
+  padding: 5px;
+  background: rgb(228, 231, 232);
+  color: rgb(196, 196, 196);
+  font-weight: 700;
+  font-size: 1rem;
+}

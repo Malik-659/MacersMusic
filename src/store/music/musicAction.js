@@ -66,7 +66,7 @@ export const getCategories = createAsyncThunk(
   "musics/getCategories",
   async () => {
     const { data } = await axios.get(MUSIC_API);
-    const uniqueCategories = new Set(data.map((music) => music.categories));
+    const uniqueCategories = new Set(data.map((music) => music.category));
     const categories = [];
     for (let i of uniqueCategories) {
       categories.push(i);
@@ -74,6 +74,16 @@ export const getCategories = createAsyncThunk(
     return categories;
   }
 );
+
+export const getAlbum = createAsyncThunk("musics/getAlbum", async () => {
+  const { data } = await axios.get(MUSIC_API);
+  const uniqueAlbum = new Set(data.map((music) => music.album));
+  const album = [];
+  for (let i of uniqueAlbum) {
+    album.push(i);
+  }
+  return album;
+});
 
 export const toggleMusicLike = createAsyncThunk(
   "musics/toggleMusicLike",

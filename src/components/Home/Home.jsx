@@ -15,7 +15,7 @@ const Home = () => {
           <p className="mt-10 ml-8   text-white text-[24px] font-bold">
             Top sharts
           </p>
-          <div className=" flex items-center justify-between bg-[#1A1E1F] w-[400px] h-[96px] ml-8 mt-8 rounded-[20px]">
+          <div className=" flex items-center justify-between bg-[#1A1E1F] w-[400px] h-[96px] ml-8 mt-8 rounded-[20px] hover:bg-[#2a1d31]">
             <img
               src={Rect}
               alt=""

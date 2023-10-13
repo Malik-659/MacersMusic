@@ -35,34 +35,35 @@ const MusicItem = ({ music }) => {
 
   return (
     <>
-      <div
-        className="text-white w-[65rem] h-[60px] flex items-center m-8 bg-[#33373B5E] rounded-[15px] justify-between relative pl-4 pr-4" // Добавляем класс "relative"
-        onClick={() => {
-          dispatch(getOneMusic({ id: music.id }));
-        }}
-      >
-        <img
-          src={music.image}
-          alt=""
-          className="rounded-lg w-[40px] h-[40px]"
-        />
-        <p className="text-[13px] font-light">{music.name}</p>
-        <p className="text-[14px] font-light">{music.author}</p>
-        <p className="text-[11px] font-light">{music.date}</p>
-        <img src={vertical} alt="" className="" />
-        <div className="absolute left-20 flex items-center">
-          {checkUserLogin() && (
-            <MusicLike
-              isLikedMusic={isLikedMusic}
-              likes={music.likes}
-              productId={music.id}
-            />
-          )}
+      <div className="">
+        <div className="absolute left-60 flex items-center w-[60px] h-[60px] bg-red-400 z-20">
+          <MusicLike
+            isLikedMusic={isLikedMusic}
+            likes={music.likes}
+            musicId={music.id}
+            setIsLikedMusic={setIsLikedMusic}
+          />
           {music.likes ? (
             <span className="text-xl">{music.likes.length}</span>
           ) : (
             <span className="text-xl">0</span>
           )}
+        </div>
+        <div
+          className="text-white w-3/4 h-[60px] flex items-center m-8 bg-[#33373B5E] hover:bg-[#2a1d31] rounded-[15px] justify-between relative pl-4 pr-4" // Добавляем класс "relative"
+          onClick={() => {
+            dispatch(getOneMusic({ id: music.id }));
+          }}
+        >
+          <img
+            src={music.image}
+            alt=""
+            className="rounded-lg w-[40px] h-[40px]"
+          />
+          <p className="text-[13px] font-light">{music.name}</p>
+          <p className="text-[14px] font-light">{music.author}</p>
+          <p className="text-[11px] font-light">{music.date}</p>
+          <img src={vertical} alt="" className="" />
         </div>
       </div>
     </>

@@ -11,6 +11,10 @@ const accountSlice = createSlice({
     modalLog: false,
   },
   reducers: {
+    // clearLogout: (state) => {
+    //   state.name = null;
+    //   state.isAdmin = null;
+    // },
     toggleReg: (state) => {
       state.modalReg = !state.modalReg;
     },
@@ -44,5 +48,5 @@ const accountSlice = createSlice({
   },
 });
 
-export const { toggleLog, toggleReg } = accountSlice.actions;
+export const { clearLogout, toggleLog, toggleReg } = accountSlice.actions;
 export default accountSlice.reducer;

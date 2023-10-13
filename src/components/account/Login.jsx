@@ -24,29 +24,27 @@ const Login = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 bottom-0 right-0 z-10 bg-[#00000086] flex items-center justify-center text-white">
+      <div className="fixed -top-40 left-0 bottom-0 right-0 z-10 bg-[#00000086] flex items-center justify-center text-white">
         <div className="w-1/4 py-4 flex flex-col items-center bg-[#525252bc] relative rounded-2xl">
           <MdCancel
             onClick={() => dispatch(toggleLog())}
             className=" absolute top-4 right-4 fill-white z-10 w-7 h-7"
           />
-          <h2 className=" font-bold text-3xl">Авторизация</h2>
-          <div className="p-5  flex flex-col items-center justify-center">
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-25 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
-              onChange={(e) => setUser({ ...user, name: e.target.value })}
-            />
-            <input
-              type="text"
-              placeholder="Password"
-              className="w-25 h-14 rounded-2xl p-5 outline-none bg-[#242424f0] text-white"
-              onChange={(e) => setUser({ ...user, password: e.target.value })}
-            />
-          </div>
+          <h2 className="my-6 font-bold text-3xl">Авторизация</h2>
+          <input
+            type="text"
+            placeholder="Name"
+            className="w-3/4 h-14  my-6 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
+            onChange={(e) => setUser({ ...user, name: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Password"
+            className="w-3/4 h-14  my-6 rounded-2xl p-5 outline-none bg-[#242424f0] text-white"
+            onChange={(e) => setUser({ ...user, password: e.target.value })}
+          />
           <button
-            className="w-1/4 h-12 rounded-2xl bg-[#242424f0] text-white"
+            className="w-3/4 h-12  my-6 rounded-2xl bg-[#242424f0] text-white"
             onClick={userLogin}
           >
             Войти
@@ -56,12 +54,12 @@ const Login = () => {
               dispatch(toggleLog());
               dispatch(toggleReg());
             }}
-            className="mt-7"
+            className="mt-2"
           >
             Зарегистрироваться сейчас
           </p>
           <p className="mt-7">Другие способы входа</p>
-          <div className="flex mt-10">
+          <div className="flex mt-6">
             <FcGoogle className="w-11 h-11" />
             <AiFillFacebook className="w-11 h-11 mx-4 text-blue-400" />
             <AiFillGithub className="w-11 h-11" />
