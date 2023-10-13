@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { registerAccount } from "../../store/account/accountAction";
+import {
+  checkAccountUser,
+  registerAccount,
+} from "../../store/account/accountAction";
 import { MdCancel } from "react-icons/md";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub, AiFillFacebook } from "react-icons/ai";
@@ -18,7 +21,6 @@ const Register = () => {
     for (let key in user) {
       if (!user[key].trim()) return alert("empty");
     }
-
     dispatch(registerAccount(user));
     dispatch(toggleReg());
   }

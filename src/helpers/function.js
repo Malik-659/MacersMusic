@@ -2,7 +2,11 @@ import axios from "axios";
 
 //!
 export const addToLocalStorage = (name) => {
-  localStorage.setItem("name", JSON.stringify(name));
+  if (!name) {
+    return;
+  } else {
+    localStorage.setItem("name", JSON.stringify(name));
+  }
 };
 
 export const logout = () => {
