@@ -8,12 +8,18 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { IoLogOut } from "react-icons/io5";
 import { BsPersonFill } from "react-icons/bs";
-import { toggleLog, toggleReg } from "../../store/account/accountSlice";
+import {
+  clearLogout,
+  toggleLog,
+  toggleReg,
+} from "../../store/account/accountSlice";
 import Login from "../account/Login";
 import Register from "../account/Register";
+import { logout } from "../../helpers/function";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 const SideBar = () => {
-  const { modalReg, modalLog } = useSelector((state) => state.account);
+  const { modalReg, modalLog, isAdmin } = useSelector((state) => state.account);
 
   useEffect(() => {
     if (modalLog || modalReg) {
@@ -53,10 +59,17 @@ const SideBar = () => {
               className="w-7 h-7 fill-[#bababa]"
               onClick={() => navigate("/radio")}
             />
-            <IoMdAddCircle
-              className="w-7 h-7 fill-[#bababa]"
-              onClick={() => navigate("/add-music")}
-            />
+            {/* {isAdmin ? ( */}
+            <>
+              <IoMdAddCircle
+                className="w-7 h-7 fill-[#bababa]"
+                onClick={() => navigate("/add-music")}
+              />
+              {/* <MdOutlineFavoriteBorder className="w-7 h-7 fill-[#bababa]" /> */}
+            </>
+            {/* // ) : (
+            //   <MdOutlineFavoriteBorder className="w-7 h-7 fill-[#bababa]" />
+            // )} */}
           </div>
           <div className="w-14 h-32 bg-[#1A1E1F] flex flex-col justify-around p-2 items-center rounded-3xl">
             <BsPersonFill
@@ -65,7 +78,10 @@ const SideBar = () => {
             />
             <IoLogOut
               className="w-7 h-7 fill-[#bababa]"
-              onClick={() => navigate("/")}
+              onClick={() => {
+                logout();
+                dispatch(clearLogout());
+              }}
             />
           </div>
         </div>
