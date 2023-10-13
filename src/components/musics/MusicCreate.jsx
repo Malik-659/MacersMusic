@@ -1,9 +1,14 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { setMusic } from "../../store/music/musicAction";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getAlbum,
+  getCategories,
+  setMusic,
+} from "../../store/music/musicAction";
 
 const MusicCreate = () => {
   const dispatch = useDispatch();
+  const { categories, albums } = useSelector((state) => state.musics);
   const [addMusic, setAddMusic] = useState({
     name: "",
     image: "",
@@ -20,6 +25,11 @@ const MusicCreate = () => {
 
     dispatch(setMusic({ addMusic }));
   }
+
+  useEffect(() => {
+    dispatch(getCategories());
+    dispatch(getAlbum());
+  }, []);
 
   return (
     <div className="pl-[120px] pt-[90px] w-[100%] h-full bg-[#1D2123] relative z-0 flex justify-center">
@@ -56,22 +66,35 @@ const MusicCreate = () => {
             }
             className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
           />
-          <input
-            type="text"
-            placeholder="Категория"
+
+          <select
             onChange={(e) =>
               setAddMusic({ ...addMusic, category: e.target.value })
             }
             className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
-          />
-          <input
-            type="text"
-            placeholder="Альбом"
+          >
+            <option disabled>Choose genre</option>
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+
+          <select
             onChange={(e) =>
               setAddMusic({ ...addMusic, album: e.target.value })
             }
             className="bg-[#1A1E1F] w-[450px] h-[35px] rounded-3xl mt-5 text-gray-200 outline-none pl-[25px]"
-          />
+          >
+            <option disabled>Choose album</option>
+            {albums.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+
           <button
             onClick={createMusic}
             className="w-[150px] h-[40px] bg-[#1A1E1F] mt-4 rounded-[15px] text-white "
