@@ -25,7 +25,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="fixed -top-52 left-0 bottom-0 right-0 z-10 bg-[#00000086] flex items-center justify-center text-white">
+      <div className="fixed -top-52 left-0 bottom-0 right-0 z-50 bg-[#00000086] flex items-center justify-center text-white">
         <div className="w-1/4  flex flex-col items-center py-4 bg-[#525252bc] relative rounded-2xl">
           <MdCancel
             onClick={() => dispatch(toggleReg())}
@@ -36,19 +36,19 @@ const Register = () => {
             <input
               type="text"
               placeholder="Name"
-              className="w-25 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
+              className="w-3/4 my-6 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
               onChange={(e) => setUser({ ...user, name: e.target.value })}
             />
             <input
               type="text"
               placeholder="Mail"
-              className="w-25 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
+              className="w-3/4 my-6 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
               onChange={(e) => setUser({ ...user, mail: e.target.value })}
             />
             <input
               type="text"
               placeholder="Password"
-              className="w-25 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
+              className="w-3/4 my-6 h-14 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
               onChange={(e) => setUser({ ...user, password: e.target.value })}
             />
           </div>

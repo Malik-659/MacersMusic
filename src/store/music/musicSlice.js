@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getMusic, getOneMusic, setMusic } from "./musicAction";
+import {
+  getAlbum,
+  getCategories,
+  getMusic,
+  getOneMusic,
+  setMusic,
+} from "./musicAction";
 
 const musicSlice = createSlice({
   name: "musics",
@@ -27,6 +33,7 @@ const musicSlice = createSlice({
     currentCategory: "",
     search: "",
     categories: [],
+    albums: [],
     sortByRating: "",
   },
   reducers: {
@@ -83,6 +90,12 @@ const musicSlice = createSlice({
       .addCase(getOneMusic.rejected, (state) => {
         state.loading = false;
         state.status = "error";
+      })
+      .addCase(getCategories.fulfilled, (state, action) => {
+        state.categories = action.payload;
+      })
+      .addCase(getAlbum.fulfilled, (state, action) => {
+        state.albums = action.payload;
       });
   },
 });
