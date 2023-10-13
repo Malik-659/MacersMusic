@@ -6,13 +6,6 @@
       "mail": "@mail",
       "password": "admin",
       "admin": true
-    },
-    {
-      "name": "1",
-      "mail": "1",
-      "password": "1",
-      "admin": false,
-      "id": 2
     }
   ],
   "musics": [
@@ -24,7 +17,12 @@
       "category": "13",
       "album": "123",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697190729868,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 1
     },
@@ -36,7 +34,12 @@
       "category": "Pop",
       "album": "MAP OF THE SOUL: PERSONA",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697190729202,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 3
     },
@@ -84,7 +87,12 @@
       "category": "Pop",
       "album": "Insomniac",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697191260425,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 7
     },
@@ -96,7 +104,12 @@
       "category": "Pop",
       "album": "Nightflight to Venus",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697191259276,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 8
     },
@@ -132,7 +145,12 @@
       "category": "1",
       "album": "1",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697190736398,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 11
     },

@@ -1,20 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { loginAccount, registerAccount } from "./accountAction";
+import {
+  checkAccountUser,
+  loginAccount,
+  registerAccount,
+} from "./accountAction";
 import { addToLocalStorage } from "../../helpers/function";
 
 const accountSlice = createSlice({
   name: "account",
   initialState: {
     name: null,
+    admin: null,
     loading: false,
+    status: "",
     modalReg: false,
     modalLog: false,
   },
   reducers: {
-    // clearLogout: (state) => {
-    //   state.name = null;
-    //   state.isAdmin = null;
-    // },
     toggleReg: (state) => {
       state.modalReg = !state.modalReg;
     },
@@ -29,17 +31,19 @@ const accountSlice = createSlice({
       })
       .addCase(registerAccount.fulfilled, (state, action) => {
         state.loading = false;
-        // state.loading = action.payload;
+        state.status = action.payload;
       })
       .addCase(registerAccount.rejected, (state) => {
         state.loading = false;
+        state.status = "error";
       })
       .addCase(loginAccount.pending, (state) => {
         state.loading = true;
       })
       .addCase(loginAccount.fulfilled, (state, action) => {
         state.loading = false;
-        state.user = action.payload.name;
+        state.name = action.payload.name;
+        state.admin = action.payload.admin;
         addToLocalStorage(action.payload.name);
       })
       .addCase(loginAccount.rejected, (state) => {

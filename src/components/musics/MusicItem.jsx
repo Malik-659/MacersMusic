@@ -36,7 +36,7 @@ const MusicItem = ({ music }) => {
   return (
     <>
       <div className="">
-        <div className="absolute left-60 flex items-center w-[60px] h-[60px] bg-red-400 z-20">
+        <div className="absolute left-60 flex items-center w-[60px] h-[60px] z-10">
           <MusicLike
             isLikedMusic={isLikedMusic}
             likes={music.likes}

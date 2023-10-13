@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { USERS_API } from "../../helpers/const";
+import { MUSIC_API, USERS_API } from "../../helpers/const";
 import { useRevalidator } from "react-router-dom";
 
 export const registerAccount = createAsyncThunk(
@@ -13,7 +13,6 @@ export const registerAccount = createAsyncThunk(
     } else {
       user[admin] = !adminValue;
     }
-
     const res = await axios.post(USERS_API, user);
   }
 );
@@ -27,8 +26,10 @@ export const loginAccount = createAsyncThunk(
       (item) => user.name === item.name && user.password === item.password
     );
 
-    if (!oneUser) return null;
-
-    return oneUser;
+    if (!oneUser) {
+      return alert("Такой пользователльл не найден!");
+    } else {
+      return oneUser;
+    }
   }
 );
