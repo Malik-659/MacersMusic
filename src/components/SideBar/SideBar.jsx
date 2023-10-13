@@ -11,6 +11,7 @@ import { BsPersonFill } from "react-icons/bs";
 import { toggleLog, toggleReg } from "../../store/account/accountSlice";
 import Login from "../account/Login";
 import Register from "../account/Register";
+import { logout } from "../../helpers/function";
 
 const SideBar = () => {
   const { modalReg, modalLog } = useSelector((state) => state.account);
@@ -65,7 +66,7 @@ const SideBar = () => {
             />
             <IoLogOut
               className="w-7 h-7 fill-[#bababa]"
-              onClick={() => navigate("/")}
+              onClick={() => logout()}
             />
           </div>
         </div>
