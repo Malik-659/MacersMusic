@@ -50,7 +50,7 @@ const MusicItem = ({ music }) => {
           )}
         </div>
         <div
-          className="text-white w-3/4 h-[60px] flex items-center m-8 bg-[#33373B5E] rounded-[15px] justify-between relative pl-4 pr-4" // Добавляем класс "relative"
+          className="text-white w-3/4 h-[60px] flex items-center m-8 bg-[#33373B5E] hover:bg-[#2a1d31] rounded-[15px] justify-between relative pl-4 pr-4" // Добавляем класс "relative"
           onClick={() => {
             dispatch(getOneMusic({ id: music.id }));
           }}
