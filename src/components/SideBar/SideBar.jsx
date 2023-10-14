@@ -8,18 +8,14 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { IoLogOut } from "react-icons/io5";
 import { BsPersonFill } from "react-icons/bs";
-import {
-  clearLogout,
-  toggleLog,
-  toggleReg,
-} from "../../store/account/accountSlice";
+import { toggleLog } from "../../store/account/accountSlice";
 import Login from "../account/Login";
 import Register from "../account/Register";
 import { logout } from "../../helpers/function";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 const SideBar = () => {
-  const { modalReg, modalLog, isAdmin } = useSelector((state) => state.account);
+  const { modalReg, modalLog, admin } = useSelector((state) => state.account);
 
   useEffect(() => {
     if (modalLog || modalReg) {
@@ -59,17 +55,23 @@ const SideBar = () => {
               className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => navigate("/radio")}
             />
-            {/* {isAdmin ? ( */}
-            <>
-              <IoMdAddCircle
-                className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
-                onClick={() => navigate("/add-music")}
+            {admin ? (
+              <>
+                <IoMdAddCircle
+                  className="w-7 h-7 fill-[#bababa]"
+                  onClick={() => navigate("/add-music")}
+                />
+                <MdOutlineFavoriteBorder
+                  onClick={() => navigate("/favorite")}
+                  className="w-7 h-7 fill-[#bababa]"
+                />
+              </>
+            ) : (
+              <MdOutlineFavoriteBorder
+                onClick={() => navigate("/favorite")}
+                className="w-7 h-7 fill-[#bababa]"
               />
-              {/* <MdOutlineFavoriteBorder className="w-7 h-7 fill-[#bababa]" /> */}
-            </>
-            {/* // ) : (
-            //   <MdOutlineFavoriteBorder className="w-7 h-7 fill-[#bababa]" />
-            // )} */}
+            )}
           </div>
           <div className="w-14 h-32 bg-[#1A1E1F] flex flex-col justify-around p-2 items-center rounded-3xl">
             <BsPersonFill
@@ -80,7 +82,6 @@ const SideBar = () => {
               className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-3xl shadow-yellow-500"
               onClick={() => {
                 logout();
-                dispatch(clearLogout());
               }}
             />
           </div>
