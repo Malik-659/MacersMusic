@@ -4,8 +4,9 @@ import { PiShuffleAngularBold } from "react-icons/pi";
 import { BiSkipPrevious, BiSkipNext } from "react-icons/bi";
 import { BsFillPlayCircleFill, BsRepeat1 } from "react-icons/bs";
 import { ImVolumeMedium } from "react-icons/im";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import changeShow from '../../store/account/accountSlice'
+ 
 const formatTime = (timeInSeconds) => {
   const min = Math.floor(timeInSeconds / 60);
   const sec = Math.floor(timeInSeconds % 60);
@@ -18,6 +19,7 @@ const MusicPlayer = () => {
   const [play, { pause, duration, sound }] = useSound(oneMusic.music);
   const [seconds, setSeconds] = useState(0);
   const [currTime, setCurrTime] = useState(formatTime(0));
+  const dispatch = useDispatch()
 
   const playingButton = () => {
     if (isPlaying) {
@@ -110,6 +112,10 @@ const MusicPlayer = () => {
             className=""
           />
         </div>
+        <div className="w-8 h-8 bg-red-500"
+    onClick={() => { dispatch(changeShow(false)); }}
+></div>
+
       </div>
     </div>
   );

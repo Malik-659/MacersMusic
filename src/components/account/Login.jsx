@@ -34,13 +34,13 @@ const Login = () => {
           <input
             type="text"
             placeholder="Name"
-            className="w-3/4 h-14  my-6 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-white"
+            className="w-3/4 h-14  my-6 rounded-2xl mb-5 p-5 outline-none bg-[#242424f0] text-black"
             onChange={(e) => setUser({ ...user, name: e.target.value })}
           />
           <input
             type="text"
             placeholder="Password"
-            className="w-3/4 h-14  my-6 rounded-2xl p-5 outline-none bg-[#242424f0] text-white"
+            className="w-3/4 h-14  my-6 rounded-2xl p-5 outline-none bg-[#242424f0] text-black"
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
           <button

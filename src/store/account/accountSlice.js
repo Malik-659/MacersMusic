@@ -9,8 +9,13 @@ const accountSlice = createSlice({
     loading: false,
     modalReg: false,
     modalLog: false,
+    show: true
   },
   reducers: {
+
+    changeShow : (state, action) => {
+      state.show = action.payload
+    },
     // clearLogout: (state) => {
     //   state.name = null;
     //   state.isAdmin = null;
@@ -39,7 +44,7 @@ const accountSlice = createSlice({
       })
       .addCase(loginAccount.fulfilled, (state, action) => {
         state.loading = false;
-        state.user = action.payload.name;
+        state.user = action.payload;
         addToLocalStorage(action.payload.name);
       })
       .addCase(loginAccount.rejected, (state) => {
