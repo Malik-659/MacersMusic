@@ -8,13 +8,7 @@ import MusicCreate from "./components/musics/MusicCreate";
 import MusicList from "./components/musics/MusicList";
 import MainRoutes from "./routing/MainRoutes";
 function App() {
-  return (
-    <>
-      <SideBar />
-      <MainRoutes />
-      <MusicPlayer />
-    </>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
