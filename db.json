@@ -6,6 +6,13 @@
       "mail": "@mail",
       "password": "admin",
       "admin": true
+    },
+    {
+      "name": "argen",
+      "mail": "@mail.com",
+      "password": "argen",
+      "admin": false,
+      "id": 2
     }
   ],
   "musics": [
@@ -19,8 +26,12 @@
       "comments": [],
       "likes": [
         {
-          "id": 1697190729868,
+          "id": 1697436486444,
           "user": "admin"
+        },
+        {
+          "id": 1697436507598,
+          "user": "argen"
         }
       ],
       "rating": [],
@@ -51,7 +62,12 @@
       "category": "Pop",
       "album": "Vinyl 1",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697436433539,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 4
     },
@@ -63,7 +79,12 @@
       "category": "Pop",
       "album": "Vinyl 1",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697436503173,
+          "user": "argen"
+        }
+      ],
       "rating": [],
       "id": 5
     },
@@ -75,7 +96,12 @@
       "category": "Pop",
       "album": "Конец попсе, танцуют все",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697436504602,
+          "user": "argen"
+        }
+      ],
       "rating": [],
       "id": 6
     },
@@ -152,7 +178,6 @@
         }
       ],
       "rating": [],
-
       "id": 11
     },
     {
@@ -178,6 +203,30 @@
       "likes": [],
       "rating": [],
       "id": 13
+    },
+    {
+      "name": "1",
+      "image": "1",
+      "music": "1",
+      "author": "1",
+      "category": "Pop",
+      "album": "Конец попсе, танцуют все",
+      "comments": [],
+      "likes": [],
+      "rating": [],
+      "id": 14
+    },
+    {
+      "name": "1",
+      "image": "1",
+      "music": "1",
+      "author": "1",
+      "category": "Pop",
+      "album": "Конец попсе, танцуют все",
+      "comments": [],
+      "likes": [],
+      "rating": [],
+      "id": 15
     }
   ]
 }
