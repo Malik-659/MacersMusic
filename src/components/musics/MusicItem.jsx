@@ -35,6 +35,8 @@ const MusicItem = ({ music }) => {
   useEffect(() => {
     checkMusicLike();
   }, []);
+
+  
   return (
     <>
       <div className="outline-none">
@@ -45,11 +47,13 @@ const MusicItem = ({ music }) => {
               likes={music.likes}
               musicId={music.id}
               setIsLikedMusic={setIsLikedMusic}
+              
             />
             {music.likes ? (
               <span className="text-xl">{music.likes.length}</span>
+              
             ) : (
-              <span className="text-xl">0</span>
+              <span className="text-xl">f</span>
             )}
           </div>  
           )}
@@ -58,7 +62,6 @@ const MusicItem = ({ music }) => {
           className="text-white w-3/4 h-[60px] flex items-center m-8 bg-[#33373B5E]  rounded-[15px] justify-between relative pl-4 pr-4" // Добавляем класс "relative"
           onClick={() => {
             dispatch(getOneMusic({ id: music.id }))
-            dispatch(changeShow(true))
           }}
         >
           <img
