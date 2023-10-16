@@ -10,13 +10,11 @@ import MainRoutes from "./routing/MainRoutes";
 
 
 function App() {
-  return (
-    <>
-      <SideBar />
-      <MainRoutes />
-      <MusicPlayer />
-    </>
-  );
+  return <div className="App">
+    <SideBar/>
+    <MainRoutes/>
+    <MusicPlayer/>
+  </div>;
 }
 
 export default App;
