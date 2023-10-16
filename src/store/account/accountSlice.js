@@ -15,6 +15,7 @@ const accountSlice = createSlice({
     status: "",
     modalReg: false,
     modalLog: false,
+    show: true
   },
   reducers: {
     toggleReg: (state) => {
