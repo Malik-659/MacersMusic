@@ -38,19 +38,22 @@ const MusicItem = ({ music }) => {
   return (
     <>
       <div className="outline-none">
-        <div className="absolute left-60 flex items-center w-[60px] h-[60px] z-10 outline-none">
-          <MusicLike
-            isLikedMusic={isLikedMusic}
-            likes={music.likes}
-            musicId={music.id}
-            setIsLikedMusic={setIsLikedMusic}
-          />
-          {music.likes ? (
-            <span className="text-xl">{music.likes.length}</span>
-          ) : (
-            <span className="text-xl">0</span>
+        {checkUserLogin() && (
+            <div className="absolute left-60 flex items-center w-[60px] h-[60px] z-10 outline-none">
+            <MusicLike
+              isLikedMusic={isLikedMusic}
+              likes={music.likes}
+              musicId={music.id}
+              setIsLikedMusic={setIsLikedMusic}
+            />
+            {music.likes ? (
+              <span className="text-xl">{music.likes.length}</span>
+            ) : (
+              <span className="text-xl">0</span>
+            )}
+          </div>  
           )}
-        </div>
+        
         <div
           className="text-white w-3/4 h-[60px] flex items-center m-8 bg-[#33373B5E]  rounded-[15px] justify-between relative pl-4 pr-4" // Добавляем класс "relative"
           onClick={() => {

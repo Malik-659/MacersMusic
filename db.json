@@ -5,7 +5,22 @@
       "name": "admin",
       "mail": "@mail",
       "password": "admin",
+      "favorites": [],
       "admin": true
+    },
+    {
+      "name": "sulaiman",
+      "mail": "sulaiman",
+      "password": "sulaiman",
+      "admin": false,
+      "id": 2
+    },
+    {
+      "name": "suli",
+      "mail": "suli",
+      "password": "suli",
+      "admin": false,
+      "id": 3
     }
   ],
   "musics": [
@@ -19,8 +34,12 @@
       "comments": [],
       "likes": [
         {
-          "id": 1697190729868,
-          "user": "admin"
+          "id": 1697292968444,
+          "user": null
+        },
+        {
+          "id": 1697440050919,
+          "user": "sulaiman"
         }
       ],
       "rating": [],
@@ -36,8 +55,12 @@
       "comments": [],
       "likes": [
         {
-          "id": 1697190729202,
+          "id": 1697439851310,
           "user": "admin"
+        },
+        {
+          "id": 1697440056877,
+          "user": "sulaiman"
         }
       ],
       "rating": [],
@@ -51,7 +74,20 @@
       "category": "Pop",
       "album": "Vinyl 1",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697296684723,
+          "user": "suli"
+        },
+        {
+          "id": 1697439852917,
+          "user": "admin"
+        },
+        {
+          "id": 1697440058643,
+          "user": "sulaiman"
+        }
+      ],
       "rating": [],
       "id": 4
     },
@@ -63,7 +99,20 @@
       "category": "Pop",
       "album": "Vinyl 1",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697296683765,
+          "user": "suli"
+        },
+        {
+          "id": 1697439854693,
+          "user": "admin"
+        },
+        {
+          "id": 1697440049157,
+          "user": "sulaiman"
+        }
+      ],
       "rating": [],
       "id": 5
     },
@@ -75,7 +124,20 @@
       "category": "Pop",
       "album": "Конец попсе, танцуют все",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697296682309,
+          "user": "suli"
+        },
+        {
+          "id": 1697439909193,
+          "user": "admin"
+        },
+        {
+          "id": 1697440060175,
+          "user": "sulaiman"
+        }
+      ],
       "rating": [],
       "id": 6
     },
@@ -91,6 +153,18 @@
         {
           "id": 1697191260425,
           "user": "admin"
+        },
+        {
+          "id": 1697296681813,
+          "user": "suli"
+        },
+        {
+          "id": 1697439856129,
+          "user": "admin"
+        },
+        {
+          "id": 1697440061010,
+          "user": "sulaiman"
         }
       ],
       "rating": [],
@@ -108,6 +182,14 @@
         {
           "id": 1697191259276,
           "user": "admin"
+        },
+        {
+          "id": 1697296680117,
+          "user": "suli"
+        },
+        {
+          "id": 1697302269159,
+          "user": "Sulaiman"
         }
       ],
       "rating": [],
@@ -121,7 +203,16 @@
       "category": "Rap",
       "album": "8 Mile",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697296679314,
+          "user": "suli"
+        },
+        {
+          "id": 1697439910969,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 9
     },
@@ -133,7 +224,16 @@
       "category": "Rap",
       "album": "неболей - Single",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697296678761,
+          "user": "suli"
+        },
+        {
+          "id": 1697439912534,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 10
     },
@@ -147,12 +247,11 @@
       "comments": [],
       "likes": [
         {
-          "id": 1697190736398,
-          "user": "admin"
+          "id": 1697296678208,
+          "user": "suli"
         }
       ],
       "rating": [],
-
       "id": 11
     },
     {
@@ -163,7 +262,12 @@
       "category": "1",
       "album": "1",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697296677447,
+          "user": "suli"
+        }
+      ],
       "rating": [],
       "id": 12
     },

@@ -15,11 +15,15 @@ const Register = () => {
     name: "",
     mail: "",
     password: "",
+
   });
 
   function addUser() {
     for (let key in user) {
-      if (!user[key].trim()) return alert("empty");
+      if (!user[key].trim()) {
+        alert("empty");
+        return;
+      }
     }
     dispatch(registerAccount(user));
     dispatch(toggleReg());

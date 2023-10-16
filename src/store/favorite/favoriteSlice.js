@@ -1,18 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getFavoriteMusic } from "./favoriteAction";
+import { getFavoriteMusics } from "./favoriteAction";
 
 const favoriteSlice = createSlice({
   name: "favorites",
   initialState: {
-    musics: [],
+    favorites: [],
     loading: false,
   },
   extraReducers: (builder) => {
-    builder.addCase(getFavoriteMusic.fulfilled, (state, action) => {
-      state.loading = false;
-      state.musics = action.payload;
-      console.log(state.musics);
-    });
+    builder
+      .addCase(getFavoriteMusics.fulfilled, (state, action) => {
+        state.loading = false;
+        state.favorites = action.payload;
+        console.log(state.musics);
+      })
+      
   },
 });
 

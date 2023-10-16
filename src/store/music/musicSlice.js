@@ -10,7 +10,9 @@ import {
 const musicSlice = createSlice({
   name: "musics",
   initialState: {
-    musics: [], //
+    musics: [],
+    seacrhMusic: [],
+    serchStatus: false,
     oneMusic: {
       name: "Корабли",
       image: "https://i.ytimg.com/vi/S0sh7CKrcI0/maxresdefault.jpg",
@@ -56,6 +58,17 @@ const musicSlice = createSlice({
         state.sortByRating = `&_sort=rating&_order=${action.payload.sortByRating}`;
       }
     },
+
+    getSeachMusic: (state, action) => {
+      state.seacrhMusic.push(action.payload)
+      state.serchStatus = true
+    },
+
+    removeSeachMusic: (state, action) => {
+      state.serchStatus = false
+      state.seacrhMusic = []
+    }
+
   },
   extraReducers: (builder) => {
     builder

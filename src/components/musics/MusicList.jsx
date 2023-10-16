@@ -11,13 +11,13 @@ import changeShow from '../../store/account/accountSlice'
 
 const MusicList = () => {
   const show = useSelector((state) => state.account.show)
-  console.log(show)
+  const { seacrhMusic } = useSelector((state) => state.musics)
   const { musics } = useSelector((state) => state.musics);
   const dispatch = useDispatch();
   
   useEffect(() => {
     dispatch(getMusic());
-  }, []);
+  }, [musics]);
 
 
   return (
