@@ -14,6 +14,7 @@ export const setMusic = createAsyncThunk(
     };
     const data = await axios.post(MUSIC_API, { ...addMusic, ...musicObj });
     console.log(data);
+    dispatch(getMusic())
   }
 );
 
