@@ -3,6 +3,7 @@ import {
   getAlbum,
   getCategories,
   getMusic,
+  getMusicPlayer,
   getOneMusic,
   setMusic,
 } from "./musicAction";
@@ -11,6 +12,7 @@ const musicSlice = createSlice({
   name: "musics",
   initialState: {
     musics: [],
+    musicPlayer: [],
     seacrhMusic: [],
     serchStatus: false,
     oneMusic: {
@@ -60,15 +62,14 @@ const musicSlice = createSlice({
     },
 
     getSeachMusic: (state, action) => {
-      state.seacrhMusic.push(action.payload)
-      state.serchStatus = true
+      state.seacrhMusic.push(action.payload);
+      state.serchStatus = true;
     },
 
     removeSeachMusic: (state, action) => {
-      state.serchStatus = false
-      state.seacrhMusic = []
-    }
-
+      state.serchStatus = false;
+      state.seacrhMusic = [];
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -109,6 +110,10 @@ const musicSlice = createSlice({
       })
       .addCase(getAlbum.fulfilled, (state, action) => {
         state.albums = action.payload;
+      })
+      .addCase(getMusicPlayer.fulfilled, (state, action) => {
+        state.loading = false;
+        state.musicPlayer = action.payload;
       });
   },
 });

@@ -36,6 +36,14 @@ export const getMusic = createAsyncThunk(
   }
 );
 
+export const getMusicPlayer = createAsyncThunk(
+  "musics/getMusicPlayer",
+  async () => {
+    const res = await axios.get(MUSIC_API);
+    return res.data;
+  }
+);
+
 //!
 export const getOneMusic = createAsyncThunk(
   "musics/getOneMusic",
