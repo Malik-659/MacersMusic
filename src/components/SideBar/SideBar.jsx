@@ -13,6 +13,7 @@ import Login from "../account/Login";
 import Register from "../account/Register";
 import { logout } from "../../helpers/function";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { AiOutlinePlusCircle } from 'react-icons/ai'
 
 const SideBar = () => {
   const { modalReg, modalLog, admin } = useSelector((state) => state.account);
@@ -51,7 +52,7 @@ const SideBar = () => {
               className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => navigate("/playlist")}
             />
-            <FaRadio
+            <AiOutlinePlusCircle
               className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => navigate("/radio")}
             />

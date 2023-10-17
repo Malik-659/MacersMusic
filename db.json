@@ -25,6 +25,7 @@
   ],
   "musics": [
     {
+
       "name": "23456",
       "image": "2345",
       "music": "https://cdn.drivemusic.club/dl/online/uyrmkkRtYF5JhW9pNGNTvw/1697224913/download_music/2023/07/anna-asti-carica.mp3",
@@ -78,6 +79,8 @@
       ],
       "rating": [],
       "id": 12
+
+
     },
     {
       "name": "Частушка",
@@ -87,7 +90,12 @@
       "category": "Pop",
       "album": "НАЗВАНИЙ НЕТ - Single",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697456421230,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 13
     }
