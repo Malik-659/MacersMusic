@@ -23,7 +23,7 @@ export const getMusic = createAsyncThunk(
     const { currentPage, currentCategory, search, sortByRating, priceRange } =
       getState().musics;
     const categoryAndSearchParams = `q=${search}${
-      currentCategory && `&type=${currentCategory}`
+      currentCategory && `&category=${currentCategory}`
     }`;
     const pagesLimitParams = `?_page=${currentPage}&_limit=15`;
     const totalPages = await getTotalPages(

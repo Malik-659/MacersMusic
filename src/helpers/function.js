@@ -21,7 +21,7 @@ export const checkUserLogin = () => {
 
 export const getTotalPages = async (url) => {
   const { data } = await axios.get(url);
-  const totalPages = Math.ceil(data.length / 12);
+  const totalPages = Math.ceil(data.length / 15);
   return totalPages;
 };
 

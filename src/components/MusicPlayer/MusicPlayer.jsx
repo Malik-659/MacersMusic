@@ -5,8 +5,8 @@ import { BiSkipPrevious, BiSkipNext } from "react-icons/bi";
 import { BsFillPlayCircleFill, BsRepeat1 } from "react-icons/bs";
 import { ImVolumeMedium } from "react-icons/im";
 import { useDispatch, useSelector } from "react-redux";
-import changeShow from '../../store/account/accountSlice'
- 
+import changeShow from "../../store/account/accountSlice";
+
 const formatTime = (timeInSeconds) => {
   const min = Math.floor(timeInSeconds / 60);
   const sec = Math.floor(timeInSeconds % 60);
@@ -19,7 +19,7 @@ const MusicPlayer = () => {
   const [play, { pause, duration, sound }] = useSound(oneMusic.music);
   const [seconds, setSeconds] = useState(0);
   const [currTime, setCurrTime] = useState(formatTime(0));
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const playingButton = () => {
     if (isPlaying) {
@@ -96,9 +96,11 @@ const MusicPlayer = () => {
               onChange={onSeek}
               className="w-[46.813rem] bg-[#FACD66]"
             />
-            <h3 className="text-white font-bold">{`${currTime.min}:${currTime.sec}/${
-              formatTime(duration / 1000).min
-            }:${formatTime(duration / 1000).sec}`}</h3>
+            <h3 className="text-white font-bold">{`${currTime.min}:${
+              currTime.sec
+            }/${formatTime(duration / 1000).min}:${
+              formatTime(duration / 1000).sec
+            }`}</h3>
           </div>
         </div>
         <div className="flex">
@@ -112,10 +114,10 @@ const MusicPlayer = () => {
             className=""
           />
         </div>
-        <div className="w-8 h-8 bg-red-500"
-    onClick={() => { dispatch(changeShow(false)); }}
-></div>
-
+        <div
+          className="w-8 h-8 bg-red-500"
+          // onClick={() => { dispatch(changeShow(false)); }}
+        ></div>
       </div>
     </div>
   );
