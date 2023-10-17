@@ -5,6 +5,7 @@ import PlayListPage from "../pages/PlayListPage";
 import RadioPage from "../pages/RadioPage";
 import MusicCreate from "../components/musics/MusicCreate";
 import PlayFavorite from "../components/PlayList/PlayFavorite";
+import MusicDetails from "../components/musics/MusicDetails";
 
 const MainRoutes = () => {
   const Links = [
@@ -32,6 +33,11 @@ const MainRoutes = () => {
       id: 5,
       path: "/favorite",
       element: <PlayFavorite />,
+    },
+    {
+      id: 6,
+      path: "/details/:id",
+      element: <MusicDetails />
     },
 
   ];

@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { getOneMusic } from "../../store/music/musicAction";
+import {
+  deleteMusic,
+  editMusic,
+  getOneMusic,
+  setComment,
+} from "../../store/music/musicAction";
+import { clearOneMusic } from "../../store/music/musicSlice";
+
 import vertical from "../../images/more-vertical.svg";
 import { useNavigate } from "react-router-dom";
 import MusicLike from "./MusicLike";
@@ -66,7 +73,8 @@ const MusicItem = ({ music }) => {
           <div className="outline-none w-[50px]">
             <p className="text-[11px] font-light">{music.date}</p>
           </div>
-          <img src={vertical} alt="" className="" onClick={() => {}} />
+          <img src={vertical} alt="" className="" onClick={() => {navigate(`/details/${music.id}`)}} />
+
         </div>
       </div>
     </>

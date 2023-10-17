@@ -4,6 +4,26 @@ import { MUSIC_API } from "../../helpers/const";
 import { getAuthUser, getTotalPages } from "../../helpers/function";
 
 //!
+export const setComment = createAsyncThunk(
+  "musics/setComment",
+  async ({ com, id }, { dispatch }) => {
+    const user = getAuthUser();
+    const obj = { id: Date.now(), comment: com, user: user };
+    const { data } = await axios.get(`${MUSIC_API}/${id}`);
+    data.comments.push(obj);
+    await axios.patch(`${MUSIC_API}/${id}`, data);
+    dispatch(getMusic());
+  }
+);
+
+export const deleteComment = createAsyncThunk(
+  "musics/deleteComment",
+  async ({id, musID}, {dispatch}) => {
+    await axios.delete(`${MUSIC_API}/${id}/comments/${musID}`)
+    dispatch(getMusic());
+  }
+)
+
 export const setMusic = createAsyncThunk(
   "musics/setMusic",
   async ({ addMusic }, { dispatch }) => {
