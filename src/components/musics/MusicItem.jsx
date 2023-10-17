@@ -11,6 +11,8 @@ import heart from "../../images/Heart.svg";
 import { useNavigate } from "react-router-dom";
 import MusicLike from "./MusicLike";
 import { checkUserLogin, getAuthUser } from "../../helpers/function";
+import MusicPlayer from "../MusicPlayer/MusicPlayer";
+import changeShow from "../../store/account/accountSlice";
 import changeShow from '../../store/account/accountSlice'
 
 
@@ -40,7 +42,7 @@ const MusicItem = ({ music }) => {
     <>
       <div className="outline-none">
         {checkUserLogin() && (
-            <div className="absolute left-60 flex items-center w-[60px] h-[60px] z-10 outline-none">
+          <div className="absolute left-60 flex items-center w-[60px] h-[60px] z-10 outline-none">
             <MusicLike
               isLikedMusic={isLikedMusic}
               likes={music.likes}
@@ -54,9 +56,9 @@ const MusicItem = ({ music }) => {
             ) : (
               <span className="text-xl">f</span>
             )}
-          </div>  
-          )}
-        
+          </div>
+        )}
+
         <div
           className="text-white w-3/4 h-[60px] flex items-center m-8 bg-[#33373B5E]  rounded-[15px] justify-between relative pl-4 pr-4" // Добавляем класс "relative"
           onClick={() => {

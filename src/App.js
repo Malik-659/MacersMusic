@@ -4,13 +4,11 @@ import SideBar from "./components/SideBar/SideBar";
 import MainRoutes from "./routing/MainRoutes";
 
 function App() {
-  return (
-    <div className="App">
-      <SideBar />
-      <MainRoutes />
-      <MusicPlayer />
-    </div>
-  );
+  return <div className="App">
+    <SideBar className = "max-md:hidden"/>
+    <MainRoutes/>
+    <MusicPlayer/>
+  </div>;
 }
 
 export default App;

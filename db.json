@@ -21,6 +21,13 @@
       "password": "suli",
       "admin": false,
       "id": 3
+    },
+    {
+      "name": "1",
+      "mail": "1",
+      "password": "1",
+      "admin": false,
+      "id": 4
     }
   ],
   "musics": [
