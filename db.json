@@ -32,7 +32,6 @@
   ],
   "musics": [
     {
-
       "name": "23456",
       "image": "2345",
       "music": "https://cdn.drivemusic.club/dl/online/uyrmkkRtYF5JhW9pNGNTvw/1697224913/download_music/2023/07/anna-asti-carica.mp3",
@@ -86,8 +85,6 @@
       ],
       "rating": [],
       "id": 12
-
-
     },
     {
       "name": "Частушка",
@@ -99,7 +96,7 @@
       "comments": [],
       "likes": [
         {
-          "id": 1697456421230,
+          "id": 1697532200084,
           "user": "admin"
         }
       ],

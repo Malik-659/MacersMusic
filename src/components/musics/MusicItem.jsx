@@ -57,10 +57,16 @@ const MusicItem = ({ music }) => {
             alt=""
             className="rounded-lg w-[40px] h-[40px]"
           />
-          <p className="text-[13px] font-light">{music.name}</p>
-          <p className="text-[14px] font-light">{music.author}</p>
-          <p className="text-[11px] font-light">{music.date}</p>
-          <img src={vertical} alt="" className="" />
+          <div className="outline-none w-[100px] pl-8 ">
+            <p className="text-[14px] font-normal">{music.name}</p>
+          </div>
+          <div className="outline-none w-[100px] pl-8 ">
+            <p className="text-[14px] font-normal">{music.author}</p>
+          </div>
+          <div className="outline-none w-[50px]">
+            <p className="text-[11px] font-light">{music.date}</p>
+          </div>
+          <img src={vertical} alt="" className="" onClick={() => {}} />
         </div>
       </div>
     </>
