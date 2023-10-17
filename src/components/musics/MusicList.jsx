@@ -9,6 +9,8 @@ import Vector from "../../images/Vector.svg";
 
 const MusicList = () => {
   const { seacrhMusic, musics } = useSelector((state) => state.musics);
+  const { oneMusic} = useSelector(state => state.musics)
+  const [image, setImage] = useState(oneMusic)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,20 +18,26 @@ const MusicList = () => {
     dispatch(getMusicPlayer());
   }, []);
 
+  useEffect(() => {
+    if(oneMusic){
+      setImage(oneMusic)
+    }
+  },[oneMusic])
+
+  console.log(image, 'image')
 
   return (
     <>
-      <div className="pl-[120px] pt-[90px] w-[100%] bg-[#1D2123] pb-16">
+      <div className="pl-[120px] pt-[90px] w-[100%] bg-[#1D2123] pb-16 ">
         <div className="flex pl-9 pt-4">
-          <img src={Lead} alt="" className="" />
-          <div className="ml-8 mt-24">
-            <p className="text-[35px] font-bold text-white">Tomorrow’s tunes</p>
-            <p className="text-white text-[14px] font-light mt-4 mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus venenatis
+          <img src={image.image} alt={image.name} className=" w-[300px] h-[288px] rounded-[35px]" />
+          <div className="ml-8 mt-20 w-full">
+            <p className="text-[33px] font-bold text-white">{image.name}</p>
+            <p className="text-white text-[24px] font-light mt-4 mb-2">
+              {image.author}
             </p>
-            <p className="text-white text-[14px] font-light">
-              64 songs ~ 16 hrs+
+            <p className="text-white text-[16px] font-light">
+              {musics.length} songs ~ {musics.length * 3.7} hrs+
             </p>
             <div className="flex items-center mt-9">
               <div className="flex items-center justify-around w-[90px] h-[38px] bg-[#FFFFFF12] rounded-[30px] ">
