@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getMusic } from "../../store/music/musicAction";
+import { getMusic, getMusicPlayer } from "../../store/music/musicAction";
 import MusicItem from "./MusicItem";
 import Lead from "../../images/Lead-image.svg";
 import Play from "../../images/Play.svg";
 import Square from "../../images/music-square.svg";
 import Vector from "../../images/Vector.svg";
-import MusicPlayer from "../MusicPlayer/MusicPlayer";
-import changeShow from "../../store/account/accountSlice";
+
+
 
 const MusicList = () => {
-  const show = useSelector((state) => state.account.show);
-  const { seacrhMusic } = useSelector((state) => state.musics);
-  const { musics } = useSelector((state) => state.musics);
+  const { seacrhMusic, musics } = useSelector((state) => state.musics);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getMusic());
+    dispatch(getMusicPlayer());
   }, []);
+
 
   return (
     <>
@@ -56,7 +56,6 @@ const MusicList = () => {
           <MusicItem key={music.id} music={music} />
         ))}
       </div>
-      {show && <MusicPlayer />}
     </>
   );
 };

@@ -14,6 +14,7 @@ export const setMusic = createAsyncThunk(
     };
     const data = await axios.post(MUSIC_API, { ...addMusic, ...musicObj });
     console.log(data);
+    dispatch(getMusic())
   }
 );
 
@@ -36,9 +37,26 @@ export const getMusic = createAsyncThunk(
   }
 );
 
+export const getMusicPlayer = createAsyncThunk(
+  "musics/getMusicPlayer",
+  async () => {
+    const res = await axios.get(MUSIC_API);
+    return res.data;
+  }
+);
+
 //!
 export const getOneMusic = createAsyncThunk(
   "musics/getOneMusic",
+  async ({ id }) => {
+    const { data } = await axios.get(`${MUSIC_API}/${id}`);
+    
+    return data;
+  }
+);
+
+export const getMus = createAsyncThunk(
+  "musics/getOneMus",
   async ({ id }) => {
     const { data } = await axios.get(`${MUSIC_API}/${id}`);
     return data;
@@ -54,7 +72,7 @@ export const deleteMusic = createAsyncThunk(
   }
 );
 
-export const editMusic = createAsyncThunk(
+export const EditMusic = createAsyncThunk(
   "musics/editMusic",
   async ({ music }, { dispatch }) => {
     await axios.patch(`${MUSIC_API}/${music.id}`, music);

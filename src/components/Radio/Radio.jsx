@@ -1,8 +1,9 @@
 import React from 'react'
+import MusicCreate from '../musics/MusicCreate'
 
 const Radio = () => {
   return (
-    <div>Radio</div>
+    <MusicCreate />
   )
 }
 

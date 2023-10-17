@@ -3,31 +3,21 @@ import {
   getAlbum,
   getCategories,
   getMusic,
+  getMusicPlayer,
   getOneMusic,
   setMusic,
+  deleteMusic,
 } from "./musicAction";
 
 const musicSlice = createSlice({
   name: "musics",
   initialState: {
     musics: [],
+    musicPlayer: [],
     seacrhMusic: [],
     serchStatus: false,
-    oneMusic: {
-      name: "Корабли",
-      image: "https://i.ytimg.com/vi/S0sh7CKrcI0/maxresdefault.jpg",
-      music:
-        "https://cdn3.sefon.pro/prev/yyNDx_QYTJL9EyG8f8qTdw/1697083777/128/MiyaGi%20-%20%D0%9A%D0%BE%D1%80%D0%B0%D0%B1%D0%BB%D0%B8%20%28192kbps%29.mp3",
-      author: "Мияги",
-      date: "2023-11-10",
-      category: "репп",
-      genre: "реп",
-      album: "andy",
-      comments: [],
-      likes: [],
-      rating: [],
-      id: 2,
-    },
+    isEdit: false,
+    oneMusic: '',
     loading: false, //
     status: "",
     currentPage: 1,
@@ -39,6 +29,14 @@ const musicSlice = createSlice({
     sortByRating: "",
   },
   reducers: {
+    changeEdit: (state) => {
+      state.isEdit = true
+    },
+
+    changeEditTrue: (state) => {
+      state.isEdit = false
+    },
+
     changeCategory: (state, action) => {
       if (action.payload.category === "all") {
         state.currentCategory = "";
@@ -60,15 +58,14 @@ const musicSlice = createSlice({
     },
 
     getSeachMusic: (state, action) => {
-      state.seacrhMusic.push(action.payload)
-      state.serchStatus = true
+      state.seacrhMusic.push(action.payload);
+      state.serchStatus = true;
     },
 
     removeSeachMusic: (state, action) => {
-      state.serchStatus = false
-      state.seacrhMusic = []
-    }
-
+      state.serchStatus = false;
+      state.seacrhMusic = [];
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -109,9 +106,17 @@ const musicSlice = createSlice({
       })
       .addCase(getAlbum.fulfilled, (state, action) => {
         state.albums = action.payload;
+      })
+      .addCase(getMusicPlayer.fulfilled, (state, action) => {
+        state.loading = false;
+        state.musicPlayer = action.payload;
+    })
+      .addCase(deleteMusic.fulfilled, (state, action) => {
+        const id = action.payload;
+        state.musics = state.musics.filter((music) => music.id !== id);
       });
   },
 });
 
-export const { clearOneMusic } = musicSlice.actions;
+export const { clearOneMusic, changeEdit, changeEditTrue } = musicSlice.actions;
 export default musicSlice.reducer;
