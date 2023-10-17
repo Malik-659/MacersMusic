@@ -195,6 +195,7 @@ const MusicPlayer = () => {
               currTime.sec
             }/${formatTime(sound.current ? sound.current.duration() : 0).min}:${
               formatTime(sound.current ? sound.current.duration() : 0).sec
+
             }`}</h3>
           </div>
         </div>

@@ -11,7 +11,7 @@ export const addToLocalStorage = (name, admin) => {
 };
 
 export const logout = () => {
-  localStorage.removeItem("name")
+  localStorage.removeItem("name");
   localStorage.removeItem("admin");
 };
 
@@ -21,18 +21,18 @@ export const checkUserLogin = () => {
   return true;
 };
 
-export const checkAdmin = () =>{
-const admin = localStorage.getItem("admin") 
-if (admin) {
-  return admin
-} else {
-  return false
-}
-}
+export const checkAdmin = () => {
+  const admin = localStorage.getItem("admin");
+  if (admin) {
+    return admin;
+  } else {
+    return false;
+  }
+};
 
 export const getTotalPages = async (url) => {
   const { data } = await axios.get(url);
-  const totalPages = Math.ceil(data.length / 12);
+  const totalPages = Math.ceil(data.length / 2);
   return totalPages;
 };
 
@@ -40,8 +40,6 @@ export const getAuthUser = () => {
   const user = JSON.parse(localStorage.getItem("name"));
   return user;
 };
-
-
 
 export const getMusicRating = (musicObj) => {
   const rating =

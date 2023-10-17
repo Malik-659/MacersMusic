@@ -14,25 +14,24 @@ export const setMusic = createAsyncThunk(
     };
     const data = await axios.post(MUSIC_API, { ...addMusic, ...musicObj });
     console.log(data);
-    dispatch(getMusic())
+    dispatch(getMusic());
   }
 );
 
 export const getMusic = createAsyncThunk(
   "musics/getMusic",
   async (_, { getState }) => {
-    const { currentPage, currentCategory, search, sortByRating, priceRange } =
-      getState().musics;
+    const { currentPage, currentCategory, search } = getState().musics;
     const categoryAndSearchParams = `q=${search}${
-      currentCategory && `&type=${currentCategory}`
+      currentCategory && `&category=${currentCategory}`
     }`;
-    const pagesLimitParams = `?_page=${currentPage}&_limit=15`;
-    const totalPages = await getTotalPages(
-      `${MUSIC_API}?${categoryAndSearchParams}${priceRange}${sortByRating}`
-    );
+    const pagesLimitParams = `?_page=${currentPage}&_limit=2`;
+    console.log(`${MUSIC_API}?${categoryAndSearchParams}`);
+    const totalPages = await getTotalPages(`${MUSIC_API}?`);
     const { data } = await axios.get(
-      `${MUSIC_API}${pagesLimitParams}&${categoryAndSearchParams}${sortByRating}`
+      `${MUSIC_API}${pagesLimitParams}&${categoryAndSearchParams}`
     );
+    console.log(totalPages);
     return { data, totalPages };
   }
 );
@@ -50,18 +49,15 @@ export const getOneMusic = createAsyncThunk(
   "musics/getOneMusic",
   async ({ id }) => {
     const { data } = await axios.get(`${MUSIC_API}/${id}`);
-    
+
     return data;
   }
 );
 
-export const getMus = createAsyncThunk(
-  "musics/getOneMus",
-  async ({ id }) => {
-    const { data } = await axios.get(`${MUSIC_API}/${id}`);
-    return data;
-  }
-);
+export const getMus = createAsyncThunk("musics/getOneMus", async ({ id }) => {
+  const { data } = await axios.get(`${MUSIC_API}/${id}`);
+  return data;
+});
 
 //!
 export const deleteMusic = createAsyncThunk(
