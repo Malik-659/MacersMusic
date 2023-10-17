@@ -35,6 +35,7 @@ const MusicCreate = () => {
     }
 
     dispatch(setMusic({ addMusic }));
+    setAddMusic({...addMusic, name: '', image: '', author: '', music: ''})
   }
 
   useEffect(() => {
@@ -162,7 +163,7 @@ const MusicCreate = () => {
                 <input
                   type="text"
                   placeholder="Название песни"
-                  value=""
+                  value={addMusic.name}
                   onChange={(e) =>
                     setAddMusic({ ...addMusic, name: e.target.value })
                   }
@@ -171,7 +172,7 @@ const MusicCreate = () => {
                 <input
                   type="text"
                   placeholder="Фото"
-                  value=""
+                  value={addMusic.image}
                   onChange={(e) =>
                     setAddMusic({ ...addMusic, image: e.target.value })
                   }
@@ -180,7 +181,7 @@ const MusicCreate = () => {
                 <input
                   type="text"
                   placeholder="Ссылка на песню"
-                  value=""
+                  value={addMusic.music}
                   onChange={(e) =>
                     setAddMusic({ ...addMusic, music: e.target.value })
                   }
@@ -189,7 +190,7 @@ const MusicCreate = () => {
                 <input
                   type="text"
                   placeholder="Автор"
-                  value=""
+                  value={addMusic.author}
                   onChange={(e) =>
                     setAddMusic({ ...addMusic, author: e.target.value })
                   }
