@@ -6,8 +6,7 @@ import Lead from "../../images/Lead-image.svg";
 import Play from "../../images/Play.svg";
 import Square from "../../images/music-square.svg";
 import Vector from "../../images/Vector.svg";
-
-
+import MusicPaginaiton from "./MusicPaginaiton";
 
 const MusicList = () => {
   const { seacrhMusic, musics } = useSelector((state) => state.musics);
@@ -63,6 +62,7 @@ const MusicList = () => {
         {musics.map((music) => (
           <MusicItem key={music.id} music={music} />
         ))}
+        <MusicPaginaiton />
       </div>
     </>
   );
