@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'lead': "url('./src/images/Lead-image.svg')",
+        'lead': "url('https://avatars.mds.yandex.net/i?id=b67abe3f3296e104cfbb4aeecc1334fb23226d68-5229005-images-thumbs&n=13')",
         'footer-texture': "url('/img/footer-texture.png')",
       }
     },
