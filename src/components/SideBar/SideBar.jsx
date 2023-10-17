@@ -8,13 +8,14 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { IoLogOut } from "react-icons/io5";
 import { BsPersonFill } from "react-icons/bs";
-import { toggleLog } from "../../store/account/accountSlice";
+import { removeAdmin, toggleLog } from "../../store/account/accountSlice";
 import Login from "../account/Login";
 import Register from "../account/Register";
-import { logout } from "../../helpers/function";
+import { checkAdmin, checkUserLogin, logout } from "../../helpers/function";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { getMusicPlayer } from "../../store/music/musicAction";
+import { getMusic } from "../../store/music/musicAction";
 
 const SideBar = () => {
   const { modalReg, modalLog, admin } = useSelector((state) => state.account);
@@ -56,11 +57,11 @@ const SideBar = () => {
               className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => navigate("/playlist")}
             />
-            <AiOutlinePlusCircle
+            {/* <AiOutlinePlusCircle
               className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-2xl shadow-yellow-500"
               onClick={() => navigate("/radio")}
-            />
-            {admin ? (
+            /> */}
+            {checkAdmin() ? (
               <>
                 <IoMdAddCircle
                   className="w-7 h-7 fill-[#bababa]"
@@ -87,6 +88,7 @@ const SideBar = () => {
               className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-3xl shadow-yellow-500"
               onClick={() => {
                 logout();
+                dispatch(removeAdmin());
               }}
             />
           </div>

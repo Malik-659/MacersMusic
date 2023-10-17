@@ -15,9 +15,13 @@ const accountSlice = createSlice({
     status: "",
     modalReg: false,
     modalLog: false,
-    show: true
+    show: true,
   },
   reducers: {
+    removeAdmin: (state) => {
+        state.admin = false
+    },
+
     toggleReg: (state) => {
       state.modalReg = !state.modalReg;
     },
@@ -45,7 +49,7 @@ const accountSlice = createSlice({
         state.loading = false;
         state.name = action.payload.name;
         state.admin = action.payload.admin;
-        addToLocalStorage(action.payload.name);
+        addToLocalStorage(action.payload.name, action.payload.admin);
       })
       .addCase(loginAccount.rejected, (state) => {
         state.loading = false;
@@ -53,5 +57,5 @@ const accountSlice = createSlice({
   },
 });
 
-export const { clearLogout, toggleLog, toggleReg } = accountSlice.actions;
+export const { clearLogout, toggleLog, toggleReg, removeAdmin } = accountSlice.actions;
 export default accountSlice.reducer;
