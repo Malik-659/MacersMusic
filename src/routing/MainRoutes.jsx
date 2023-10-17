@@ -33,11 +33,7 @@ const MainRoutes = () => {
       path: "/favorite",
       element: <PlayFavorite />,
     },
-    {
-      id: 6,
-      path: "/",
-      element: <HomePage />,
-    },
+
   ];
   return (
     <Routes>

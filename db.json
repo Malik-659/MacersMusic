@@ -25,27 +25,6 @@
   ],
   "musics": [
     {
-      "name": "23456",
-      "image": "2345",
-      "music": "https://cdn.drivemusic.club/dl/online/uyrmkkRtYF5JhW9pNGNTvw/1697224913/download_music/2023/07/anna-asti-carica.mp3",
-      "author": "234",
-      "category": "13",
-      "album": "123",
-      "comments": [],
-      "likes": [
-        {
-          "id": 1697292968444,
-          "user": null
-        },
-        {
-          "id": 1697440050919,
-          "user": "sulaiman"
-        }
-      ],
-      "rating": [],
-      "id": 1
-    },
-    {
       "name": "Boy With Luv",
       "image": "https://sefon.pro/img/artist_photos/bts.jpg",
       "music": "https://cdn3.sefon.pro/prev/aUL6VZZOXM4-37WTvzbKSw/1697221412/114/BTS%20feat.%20Halsey%20-%20Boy%20With%20Luv%20%28192kbps%29.mp3",
@@ -55,10 +34,6 @@
       "comments": [],
       "likes": [
         {
-          "id": 1697439851310,
-          "user": "admin"
-        },
-        {
           "id": 1697440056877,
           "user": "sulaiman"
         }
@@ -67,57 +42,7 @@
       "id": 3
     },
     {
-      "name": "Life",
-      "image": "https://sefon.pro/img/artist_photos/zivert.jpg",
-      "music": "https://cdn6.sefon.pro/prev/s2U3_sk0p7HXATiOr31c3Q/1697221662/83/Zivert%20-%20Life%20%28192kbps%29.mp3",
-      "author": "Zivert",
-      "category": "Pop",
-      "album": "Vinyl 1",
-      "comments": [],
-      "likes": [
-        {
-          "id": 1697296684723,
-          "user": "suli"
-        },
-        {
-          "id": 1697439852917,
-          "user": "admin"
-        },
-        {
-          "id": 1697440058643,
-          "user": "sulaiman"
-        }
-      ],
-      "rating": [],
-      "id": 4
-    },
-    {
-      "name": "Life",
-      "image": "https://sefon.pro/img/artist_photos/zivert.jpg",
-      "music": "https://cdn6.sefon.pro/prev/s2U3_sk0p7HXATiOr31c3Q/1697221662/83/Zivert%20-%20Life%20%28192kbps%29.mp3",
-      "author": "Zivert",
-      "category": "Pop",
-      "album": "Vinyl 1",
-      "comments": [],
-      "likes": [
-        {
-          "id": 1697296683765,
-          "user": "suli"
-        },
-        {
-          "id": 1697439854693,
-          "user": "admin"
-        },
-        {
-          "id": 1697440049157,
-          "user": "sulaiman"
-        }
-      ],
-      "rating": [],
-      "id": 5
-    },
-    {
-      "name": "Он тебя целует",
+      "name": "Он  меня целует ",
       "image": "https://sefon.pro/img/artist_photos/ruki-vverh.jpg",
       "music": "https://cdn2.sefon.pro/prev/NS11OOGSWRLjnpqrsJ632Q/1697221850/7/%D0%A0%D1%83%D0%BA%D0%B8%20%D0%92%D0%B2%D0%B5%D1%80%D1%85%20-%20%D0%9E%D0%BD%20%D0%A2%D0%B5%D0%B1%D1%8F%20%D0%A6%D0%B5%D0%BB%D1%83%D0%B5%D1%82%20%28192kbps%29.mp3",
       "author": "Руки Вверх",
@@ -130,19 +55,19 @@
           "user": "suli"
         },
         {
-          "id": 1697439909193,
-          "user": "admin"
-        },
-        {
           "id": 1697440060175,
           "user": "sulaiman"
+        },
+        {
+          "id": 1697456424060,
+          "user": "admin"
         }
       ],
       "rating": [],
       "id": 6
     },
     {
-      "name": "Ring My Bells",
+      "name": "Ring My Balls",
       "image": "https://sefon.pro/img/artist_photos/enrique-iglesias.jpg",
       "music": "https://cdn8.sefon.pro/prev/aNfJRO8yPKpWXP3FsOQ9bg/1697222102/1/Enrique%20Iglesias%20-%20Ring%20My%20Bells%20%28192kbps%29.mp3",
       "author": "Enrique Iglesias",
@@ -151,16 +76,8 @@
       "comments": [],
       "likes": [
         {
-          "id": 1697191260425,
-          "user": "admin"
-        },
-        {
           "id": 1697296681813,
           "user": "suli"
-        },
-        {
-          "id": 1697439856129,
-          "user": "admin"
         },
         {
           "id": 1697440061010,
@@ -180,16 +97,16 @@
       "comments": [],
       "likes": [
         {
-          "id": 1697191259276,
-          "user": "admin"
-        },
-        {
           "id": 1697296680117,
           "user": "suli"
         },
         {
           "id": 1697302269159,
           "user": "Sulaiman"
+        },
+        {
+          "id": 1697456425144,
+          "user": "admin"
         }
       ],
       "rating": [],
@@ -209,7 +126,7 @@
           "user": "suli"
         },
         {
-          "id": 1697439910969,
+          "id": 1697456422762,
           "user": "admin"
         }
       ],
@@ -230,46 +147,12 @@
           "user": "suli"
         },
         {
-          "id": 1697439912534,
+          "id": 1697456421938,
           "user": "admin"
         }
       ],
       "rating": [],
       "id": 10
-    },
-    {
-      "name": "1",
-      "image": "1",
-      "music": "https://cdn.drivemusic.club/dl/online/uyrmkkRtYF5JhW9pNGNTvw/1697224913/download_music/2023/07/anna-asti-carica.mp3",
-      "author": "1",
-      "category": "1",
-      "album": "1",
-      "comments": [],
-      "likes": [
-        {
-          "id": 1697296678208,
-          "user": "suli"
-        }
-      ],
-      "rating": [],
-      "id": 11
-    },
-    {
-      "name": "1",
-      "image": "1",
-      "music": "https://cdn.drivemusic.club/dl/online/uyrmkkRtYF5JhW9pNGNTvw/1697224913/download_music/2023/07/anna-asti-carica.mp3",
-      "author": "1",
-      "category": "1",
-      "album": "1",
-      "comments": [],
-      "likes": [
-        {
-          "id": 1697296677447,
-          "user": "suli"
-        }
-      ],
-      "rating": [],
-      "id": 12
     },
     {
       "name": "Частушка",
@@ -279,33 +162,26 @@
       "category": "Pop",
       "album": "НАЗВАНИЙ НЕТ - Single",
       "comments": [],
-      "likes": [],
+      "likes": [
+        {
+          "id": 1697456421230,
+          "user": "admin"
+        }
+      ],
       "rating": [],
       "id": 13
     },
     {
-      "name": "1",
-      "image": "1",
-      "music": "1",
-      "author": "1",
-      "category": "Pop",
-      "album": "Конец попсе, танцуют все",
+      "name": "close eyes",
+      "image": "https://avatars.mds.yandex.net/i?id=8013227330d5dc28b967d5deeff9981f82845cfa-9181188-images-thumbs&n=13",
+      "music": "http://mp3uk.net/mp3/files/dvrst-close-eyes-slowed-reverb-mp3.mp3",
+      "author": "DRSVT",
+      "category": "Rap",
+      "album": "НАЗВАНИЙ НЕТ - Single",
       "comments": [],
       "likes": [],
       "rating": [],
-      "id": 14
-    },
-    {
-      "name": "1",
-      "image": "1",
-      "music": "1",
-      "author": "1",
-      "category": "Pop",
-      "album": "Конец попсе, танцуют все",
-      "comments": [],
-      "likes": [],
-      "rating": [],
-      "id": 15
+      "id": 16
     }
   ]
 }

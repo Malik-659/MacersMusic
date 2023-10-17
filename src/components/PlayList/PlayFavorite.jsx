@@ -23,7 +23,7 @@ const PlayFavorite = () => {
 
 
   return (
-    <div className="pl-[120px] pt-[140px] w-[100%] h-[1200px] bg-[#1D2123]" >
+    <div className="pl-[120px] pt-[140px] w-[100%] h-[800px] bg-[#1D2123]" >
       <button onClick={() => dispatch(getFavoriteMusics())} className="w-[120px] h-[38px] bg-[#FACD66] flex items-center justify-center rounded-[27px]">My favorites</button>
       <div className="flex flex-wrap mt-16">
           {favoriteMusics.map((item) => (

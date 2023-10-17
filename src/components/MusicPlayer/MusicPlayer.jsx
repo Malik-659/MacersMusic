@@ -112,10 +112,6 @@ const MusicPlayer = () => {
             className=""
           />
         </div>
-        <div className="w-8 h-8 bg-red-500"
-    onClick={() => { dispatch(changeShow(false)); }}
-></div>
-
       </div>
     </div>
   );

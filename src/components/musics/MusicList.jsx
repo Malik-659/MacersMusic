@@ -17,7 +17,7 @@ const MusicList = () => {
   
   useEffect(() => {
     dispatch(getMusic());
-  }, [musics]);
+  }, []);
 
 
   return (
@@ -50,9 +50,7 @@ const MusicList = () => {
         <MusicItem key={music.id} music={music} />
       ))}
     </div>
-    {show && (
         <MusicPlayer />
-      )}
     </>
   );
 };
