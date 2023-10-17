@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import {
-  deleteMusic,
-  editMusic,
-  getOneMusic,
-} from "../../store/music/musicAction";
-import { clearOneMusic } from "../../store/music/musicSlice";
+import { getOneMusic } from "../../store/music/musicAction";
 import vertical from "../../images/more-vertical.svg";
-import heart from "../../images/Heart.svg";
 import { useNavigate } from "react-router-dom";
 import MusicLike from "./MusicLike";
 import { checkUserLogin, getAuthUser } from "../../helpers/function";
-import changeShow from "../../store/account/accountSlice";
 
 const MusicItem = ({ music }) => {
   const dispatch = useDispatch();
