@@ -24,8 +24,8 @@ const Login = () => {
 
   return (
     <>
-      <div className="fixed -top-40 left-0 bottom-0 right-0 bg-[#00000086] flex items-center justify-center text-white z-50">
-        <div className="w-1/4 py-4 flex flex-col items-center bg-[#525252bc] relative rounded-2xl">
+      <div className="fixed top-0 left-0 bottom-0 right-0 bg-[#00000086] flex items-center justify-center text-white z-50 ">
+        <div className="w-1/4 py-4 flex flex-col items-center bg-[#525252bc] relative rounded-2xl max-md:w-3/4">
           <MdCancel
             onClick={() => dispatch(toggleLog())}
             className=" absolute top-4 right-4 fill-white z-10 w-7 h-7"
@@ -44,7 +44,7 @@ const Login = () => {
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
           <button
-            className="w-3/4 h-12  my-6 rounded-2xl bg-[#242424f0] text-white"
+            className="w-1/4 h-12  my-6 rounded-2xl bg-[#242424f0] text-white"
             onClick={userLogin}
           >
             Войти

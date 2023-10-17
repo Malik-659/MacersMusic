@@ -31,14 +31,14 @@ const Register = () => {
 
   return (
     <>
-      <div className="fixed top-[200px] left-0 bottom-0 right-0 z-50 bg-[#00000086] flex items-center justify-center text-white mt-16">
-        <div className="w-1/4  flex flex-col items-center py-4 bg-[#525252bc] relative rounded-2xl">
+      <div className="fixed top-0 left-0 bottom-0 right-0 z-50 bg-[#00000086] flex items-center justify-center text-white">
+        <div className="w-1/4  flex flex-col items-center py-4 bg-[#525252bc] relative rounded-2xl max-md:w-3/4">
           <MdCancel
             onClick={() => dispatch(toggleReg())}
             className=" absolute top-4 right-4 fill-white z-10 w-7 h-7"
           />
           <h2 className=" font-bold text-3xl">Регистрация</h2>
-          <div className="pt-5  flex flex-col items-center justify-center">
+          <div className="pt-5  flex flex-col items-center justify-center w-full">
             <input
               type="text"
               placeholder="Name"
@@ -81,6 +81,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };
