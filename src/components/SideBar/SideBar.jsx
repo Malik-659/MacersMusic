@@ -11,12 +11,16 @@ import { BsPersonFill } from "react-icons/bs";
 import { removeAdmin, toggleLog } from "../../store/account/accountSlice";
 import Login from "../account/Login";
 import Register from "../account/Register";
-import { checkAdmin, checkUserLogin, logout } from "../../helpers/function";
+import {
+  checkAdmin,
+  checkUserLogin,
+  getTotalPages,
+  logout,
+} from "../../helpers/function";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { getMusic } from "../../store/music/musicAction";
-
 
 const SideBar = () => {
   const { modalReg, modalLog, admin } = useSelector((state) => state.account);
@@ -32,6 +36,7 @@ const SideBar = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   return (
     <>
       <div className="pl-3 pt-8 flex items-center w-screen bg-[#00000000] fixed z-20">
@@ -93,7 +98,7 @@ const SideBar = () => {
             <IoLogOut
               className="w-7 h-7 fill-[#bababa] hover:fill-[#FACD66] duration-500 shadow-3xl shadow-yellow-500"
               onClick={() => {
-                logout()
+                logout();
                 dispatch(removeAdmin());
               }}
             />

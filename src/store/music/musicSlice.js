@@ -17,7 +17,7 @@ const musicSlice = createSlice({
     seacrhMusic: [],
     serchStatus: false,
     isEdit: false,
-    oneMusic: '',
+    oneMusic: "",
     loading: false, //
     status: "",
     currentPage: 1,
@@ -30,11 +30,14 @@ const musicSlice = createSlice({
   },
   reducers: {
     changeEdit: (state) => {
-      state.isEdit = true
+      state.isEdit = true;
     },
 
     changeEditTrue: (state) => {
-      state.isEdit = false
+      state.isEdit = false;
+    },
+    changePage: (state, action) => {
+      state.currentPage = action.payload.page;
     },
 
     changeCategory: (state, action) => {
@@ -85,6 +88,7 @@ const musicSlice = createSlice({
       .addCase(getMusic.fulfilled, (state, action) => {
         state.loading = false;
         state.musics = action.payload.data;
+        state.totalPages = action.payload.totalPages;
       })
       .addCase(getMusic.rejected, (state) => {
         state.loading = false;
@@ -110,7 +114,7 @@ const musicSlice = createSlice({
       .addCase(getMusicPlayer.fulfilled, (state, action) => {
         state.loading = false;
         state.musicPlayer = action.payload;
-    })
+      })
       .addCase(deleteMusic.fulfilled, (state, action) => {
         const id = action.payload;
         state.musics = state.musics.filter((music) => music.id !== id);
@@ -118,5 +122,6 @@ const musicSlice = createSlice({
   },
 });
 
-export const { clearOneMusic, changeEdit, changeEditTrue } = musicSlice.actions;
+export const { changePage, clearOneMusic, changeEdit, changeEditTrue } =
+  musicSlice.actions;
 export default musicSlice.reducer;
