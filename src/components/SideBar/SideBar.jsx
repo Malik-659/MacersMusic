@@ -194,7 +194,7 @@ const SideBar = () => {
                 onClick={() => {
                   {
                     setNav(!nav);
-                    logout();
+                    logout()
                   }
                 }}
               >

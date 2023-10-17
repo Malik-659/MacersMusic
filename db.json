@@ -47,6 +47,10 @@
         {
           "id": 1697440050919,
           "user": "sulaiman"
+        },
+        {
+          "id": 1697563050678,
+          "user": "suli"
         }
       ],
       "rating": [],
@@ -81,10 +85,52 @@
         {
           "id": 1697296677447,
           "user": "suli"
+        },
+        {
+          "id": 1697563312722,
+          "user": "admin"
         }
       ],
       "rating": [],
       "id": 12
+    },
+    {
+      "name": "Частушка",
+      "image": "https://e-cdn-images.dzcdn.net/images/artist/fb0c0263e22c0f2b2790603135261a56/264x264-000000-80-0-0.jpg",
+      "music": "https://cdn.drivemusic.club/dl/online/3CtRWNs5pqIqHFbz9RXlXg/1697224913/download_music/2023/10/karna.val-chastushka.mp3",
+      "author": "Karna.val",
+      "category": "Pop",
+      "album": "НАЗВАНИЙ НЕТ - Single",
+      "comments": [
+        {
+          "id": 1697562985422,
+          "comment": "xaXA",
+          "user": "admin"
+        },
+        {
+          "id": 1697563105988,
+          "comment": "xsaxsxs",
+          "user": "admin"
+        },
+        {
+          "id": 1697563134523,
+          "comment": "dscvdfvv",
+          "user": "suli"
+        },
+        {
+          "id": 1697563142764,
+          "comment": "xsaxasc",
+          "user": "suli"
+        }
+      ],
+      "likes": [
+        {
+          "id": 1697456421230,
+          "user": "admin"
+        }
+      ],
+      "rating": [],
+      "id": 13
     }
   ]
 }

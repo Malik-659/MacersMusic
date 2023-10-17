@@ -73,8 +73,9 @@ const MusicItem = ({ music }) => {
           <div className="outline-none w-[50px]">
             <p className="text-[11px] font-light">{music.date}</p>
           </div>
-          <img src={vertical} alt="" className="" onClick={() => {navigate(`/details/${music.id}`)}} />
-
+          {checkUserLogin() && (
+            <img src={vertical} alt="" className="" onClick={() => {navigate(`/details/${music.id}`)}} />
+            )}
         </div>
       </div>
     </>

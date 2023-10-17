@@ -25,7 +25,6 @@ const MusicList = () => {
     }
   },[oneMusic])
 
-  console.log(image, 'image')
 
   return (
     <>

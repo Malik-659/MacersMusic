@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { deleteMusic, getOneMusic, setComment } from "../../store/music/musicAction";
-import CommentItem from "./CommentItem";
+import { deleteComment, deleteMusic, getMusic, getOneMusic, setComment } from "../../store/music/musicAction";
 import { checkUserLogin } from "../../helpers/function";
 
 const MusicDetails = () => {
@@ -48,7 +47,7 @@ const MusicDetails = () => {
                   {checkUserLogin() ? (
                     <button className="w-20 h-8 text-white bg-yellow-500 mr-4 rounded-[5px]"
                     onClick={() => {
-                        dispatch(deleteMusic({id: id, musID: comment.id}))
+                        dispatch(deleteComment({id: id, musID: comment.id}))
                     }}>
                       delete
                     </button>
