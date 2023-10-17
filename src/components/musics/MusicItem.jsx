@@ -11,7 +11,6 @@ import heart from "../../images/Heart.svg";
 import { useNavigate } from "react-router-dom";
 import MusicLike from "./MusicLike";
 import { checkUserLogin, getAuthUser } from "../../helpers/function";
-import MusicPlayer from "../MusicPlayer/MusicPlayer";
 import changeShow from '../../store/account/accountSlice'
 
 
