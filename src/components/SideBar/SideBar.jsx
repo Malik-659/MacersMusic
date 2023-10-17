@@ -13,7 +13,8 @@ import Login from "../account/Login";
 import Register from "../account/Register";
 import { logout } from "../../helpers/function";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
-import { AiOutlinePlusCircle } from 'react-icons/ai'
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import { getMusicPlayer } from "../../store/music/musicAction";
 
 const SideBar = () => {
   const { modalReg, modalLog, admin } = useSelector((state) => state.account);
@@ -26,6 +27,9 @@ const SideBar = () => {
     }
   }, [modalLog, modalReg]);
 
+  useEffect(() => {
+    dispatch(getMusicPlayer());
+  }, []);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (
