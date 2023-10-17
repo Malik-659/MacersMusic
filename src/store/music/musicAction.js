@@ -12,15 +12,18 @@ export const setComment = createAsyncThunk(
     const { data } = await axios.get(`${MUSIC_API}/${id}`);
     data.comments.push(obj);
     await axios.patch(`${MUSIC_API}/${id}`, data);
-    dispatch(getMusic());
+    dispatch(getOneMusic({ id: id }));
   }
 );
 
 export const deleteComment = createAsyncThunk(
   "musics/deleteComment",
   async ({id, musID}, {dispatch}) => {
-    await axios.delete(`${MUSIC_API}/${id}/comments/${musID}`)
-    dispatch(getMusic());
+    let { data } = await axios.get(`${MUSIC_API}/${id}`)
+    const comment = data.comments.filter(item => item.id !== musID)
+    data.comments = comment
+    await axios.patch(`${MUSIC_API}/${id}`, data);
+    dispatch(getOneMusic({ id: id }));
   }
 )
 
