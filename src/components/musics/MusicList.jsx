@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getMusic, getMusicPlayer } from "../../store/music/musicAction";
+import { getMusic } from "../../store/music/musicAction";
 import MusicItem from "./MusicItem";
 import Lead from "../../images/Lead-image.svg";
 import Play from "../../images/Play.svg";
@@ -9,33 +9,38 @@ import Vector from "../../images/Vector.svg";
 import MusicPaginaiton from "./MusicPaginaiton";
 
 const MusicList = () => {
-  const { seacrhMusic, musics } = useSelector((state) => state.musics);
-  const { oneMusic} = useSelector(state => state.musics)
-  const [image, setImage] = useState(oneMusic)
+  const { musics, musicPlyaListDetails } = useSelector((state) => state.musics);
+  const [isComponentMounted, setIsComponentMounted] = useState(false);
+  const list = (musicPlyaListDetails && musicPlyaListDetails[0]) || {};
+  const imageSrc = list.image || "";
+  const altText = list.name || "";
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMusic());
-    dispatch(getMusicPlayer());
-  }, []);
+    if (isComponentMounted) {
+      dispatch(getMusic());
+    }
+  }, [dispatch, isComponentMounted]);
 
   useEffect(() => {
-    if(oneMusic){
-      setImage(oneMusic)
-    }
-  },[oneMusic])
-
-  console.log(image, 'image')
+    setIsComponentMounted(true);
+  }, []);
 
   return (
     <>
-      <div className="pl-[120px] pt-[90px] w-[100%] bg-[#1D2123] pb-16 ">
+      <div className="pl-[120px] pt-[90px] w-[100%] h-1/3 bg-[#1D2123]">
         <div className="flex pl-9 pt-4">
-          <img src={image.image} alt={image.name} className=" w-[300px] h-[288px] rounded-[35px]" />
+          <img
+            src={imageSrc}
+            alt={altText}
+            className="w-[300px] h-[288px] rounded-[35px]"
+          />
           <div className="ml-8 mt-20 w-full">
-            <p className="text-[33px] font-bold text-white">{image.name}</p>
+            <p className="text-[33px] font-bold text-white">
+              {list ? list.name : ""}
+            </p>
             <p className="text-white text-[24px] font-light mt-4 mb-2">
-              {image.author}
+              {list ? list.author : ""}
             </p>
             <p className="text-white text-[16px] font-light">
               {musics.length} songs ~ {musics.length * 3.7} hrs+
