@@ -9,9 +9,11 @@ import {
   BsRepeat,
 } from "react-icons/bs";
 import { ImVolumeMedium } from "react-icons/im";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getMusicPlayList } from "../../store/music/musicAction";
 
 const MusicPlayer = () => {
+  const dispatch = useDispatch();
   const { musicPlayer } = useSelector((state) => state.musics);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -23,6 +25,10 @@ const MusicPlayer = () => {
   );
 
   const sound = useRef(null);
+
+  useEffect(() => {
+    dispatch(getMusicPlayList([musicPlayer[currentSongIndex]]));
+  }, [currentSongIndex, musicPlayer]);
 
   useEffect(() => {
     if (sound.current) {
@@ -55,7 +61,6 @@ const MusicPlayer = () => {
   }, [userAction, isPlaying]);
 
   useEffect(() => {
-    // Отслеживаем изменения в продолжительности трека и обновляем состояния
     const currentDuration = sound.current ? sound.current.duration() : 0;
     const interval = setInterval(() => {
       const currentSeconds = sound.current ? sound.current.seek() : 0;
@@ -195,7 +200,6 @@ const MusicPlayer = () => {
               currTime.sec
             }/${formatTime(sound.current ? sound.current.duration() : 0).min}:${
               formatTime(sound.current ? sound.current.duration() : 0).sec
-
             }`}</h3>
           </div>
         </div>

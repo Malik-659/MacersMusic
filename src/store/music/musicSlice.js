@@ -7,6 +7,7 @@ import {
   getOneMusic,
   setMusic,
   deleteMusic,
+  getMusicPlayList,
 } from "./musicAction";
 
 const musicSlice = createSlice({
@@ -16,6 +17,7 @@ const musicSlice = createSlice({
     musicPlayer: [],
     seacrhMusic: [],
     serchStatus: false,
+    musicPlyaListDetails: null,
     isEdit: false,
     oneMusic: "",
     loading: false, //
@@ -104,6 +106,10 @@ const musicSlice = createSlice({
       .addCase(getOneMusic.rejected, (state) => {
         state.loading = false;
         state.status = "error";
+      })
+      .addCase(getMusicPlayList.fulfilled, (state, action) => {
+        state.loading = false;
+        state.musicPlyaListDetails = action.payload;
       })
       .addCase(getCategories.fulfilled, (state, action) => {
         state.categories = action.payload;

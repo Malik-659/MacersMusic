@@ -20,6 +20,7 @@ import {
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { AiOutlinePlusCircle } from "react-icons/ai";
+import { getMusicPlayer } from "../../store/music/musicAction";
 import { getMusic } from "../../store/music/musicAction";
 
 const SideBar = () => {
@@ -34,6 +35,9 @@ const SideBar = () => {
     }
   }, [modalLog, modalReg]);
 
+  useEffect(() => {
+    dispatch(getMusicPlayer());
+  }, []);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 

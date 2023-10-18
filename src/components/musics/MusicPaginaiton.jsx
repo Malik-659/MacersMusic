@@ -22,7 +22,7 @@ export default function PaginationRounded() {
         variant="outlined"
         shape="rounded"
         sx={{
-          backgroundColor: "#1A1E1F",
+          backgroundColor: "#33373B5E",
           padding: "5px",
           borderRadius: "20px",
         }}

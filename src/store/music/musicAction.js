@@ -48,7 +48,7 @@ export const getMusic = createAsyncThunk(
     const categoryAndSearchParams = `q=${search}${
       currentCategory && `&category=${currentCategory}`
     }`;
-    const pagesLimitParams = `?_page=${currentPage}&_limit=2`;
+    const pagesLimitParams = `?_page=${currentPage}&_limit=3`;
     console.log(`${MUSIC_API}?${categoryAndSearchParams}`);
     const totalPages = await getTotalPages(`${MUSIC_API}?`);
     const { data } = await axios.get(
@@ -77,10 +77,12 @@ export const getOneMusic = createAsyncThunk(
   }
 );
 
-export const getMus = createAsyncThunk("musics/getOneMus", async ({ id }) => {
-  const { data } = await axios.get(`${MUSIC_API}/${id}`);
-  return data;
-});
+export const getMusicPlayList = createAsyncThunk(
+  "musics/getMusicPlayList",
+  async (indexMusic) => {
+    return indexMusic;
+  }
+);
 
 //!
 export const deleteMusic = createAsyncThunk(
