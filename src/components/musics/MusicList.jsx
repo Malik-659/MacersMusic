@@ -22,10 +22,6 @@ const MusicList = () => {
     }
   }, [dispatch, isComponentMounted]);
 
-  useEffect(() => {
-    setIsComponentMounted(true);
-  }, []);
-
   return (
     <>
       <div className="pl-[120px] pt-[90px] w-[100%] h-1/3 bg-[#1D2123]">
